@@ -13,8 +13,8 @@ settings:
     SWIFT_VERSION: "5.0"
     MARKETING_VERSION: "1.0.0"
     CURRENT_PROJECT_VERSION: "1"
-    # Signing team is intentionally empty: the owner sets it locally or via DEVELOPMENT_TEAM env.
-    DEVELOPMENT_TEAM: ""
+    # Apple Developer team of the owner (public identifier, not a secret).
+    DEVELOPMENT_TEAM: "3B4YZ93BS3"
     CODE_SIGN_STYLE: Automatic
     LOCALIZATION_PREFERS_STRING_CATALOGS: YES
     SWIFT_EMIT_LOC_STRINGS: NO
