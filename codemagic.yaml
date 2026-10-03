@@ -4,13 +4,13 @@ workflows:
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: key_tvremote
+      app_store_connect: key
     environment:
       ios_signing:
         distribution_type: app_store
         bundle_identifier: app.TVRemoteScreenMirroring
       vars:
-        APP_STORE_CONNECT_KEY: key_tvremote
+        APP_STORE_CONNECT_KEY: key
         APP_STORE_APPLE_ID: 6818635047
         BUNDLE_ID: "app.TVRemoteScreenMirroring"
         XCODE_PROJECT: "TVRemoteScreenMirroring.xcodeproj"
