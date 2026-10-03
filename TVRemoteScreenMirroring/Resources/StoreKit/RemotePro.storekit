@@ -1,0 +1,313 @@
+{
+  "appPolicies" : {
+    "eula" : "",
+    "policies" : [
+      {
+        "locale" : "en_US",
+        "policyText" : "",
+        "policyURL" : ""
+      }
+    ]
+  },
+  "identifier" : "5E3A9B7C",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "199.00",
+      "familyShareable" : false,
+      "internalID" : "A1F00003",
+      "localizations" : [
+        {
+          "description" : "Remote, keyboard, TV apps, photos, mirroring",
+          "displayName" : "Remote Pro Lifetime",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "Mando, teclado, apps, fotos y duplicación",
+          "displayName" : "Remote Pro de por vida",
+          "locale" : "es_ES"
+        },
+        {
+          "description" : "Пульт, клавиатура, фото и трансляция экрана",
+          "displayName" : "Remote Pro навсегда",
+          "locale" : "ru"
+        },
+        {
+          "description" : "Fernbedienung, Tastatur, Fotos, Spiegelung",
+          "displayName" : "Remote Pro dauerhaft",
+          "locale" : "de"
+        },
+        {
+          "description" : "Télécommande, clavier, photos et recopie",
+          "displayName" : "Remote Pro à vie",
+          "locale" : "fr"
+        }
+      ],
+      "productID" : "remote_pro_lifetime",
+      "referenceName" : "Remote Pro Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "B2E00001",
+      "localizations" : [
+
+      ],
+      "name" : "Remote Pro",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+            {
+              "eligibility" : [
+                "new"
+              ],
+              "internalID" : "C0DE7F01",
+              "isStackable" : false,
+              "numberOfPeriods" : 1,
+              "paymentMode" : "free",
+              "referenceName" : "wheel_free7_monthly",
+              "subscriptionPeriod" : "P1W"
+            },
+            {
+              "displayPrice" : "8.49",
+              "eligibility" : [
+                "new"
+              ],
+              "internalID" : "C0DE7F10",
+              "isStackable" : false,
+              "numberOfPeriods" : 1,
+              "paymentMode" : "payAsYouGo",
+              "referenceName" : "wheel_d5_monthly",
+              "subscriptionPeriod" : "P1M"
+            },
+            {
+              "displayPrice" : "7.99",
+              "eligibility" : [
+                "new"
+              ],
+              "internalID" : "C0DE7F11",
+              "isStackable" : false,
+              "numberOfPeriods" : 1,
+              "paymentMode" : "payAsYouGo",
+              "referenceName" : "wheel_d10_monthly",
+              "subscriptionPeriod" : "P1M"
+            },
+            {
+              "displayPrice" : "7.59",
+              "eligibility" : [
+                "new"
+              ],
+              "internalID" : "C0DE7F12",
+              "isStackable" : false,
+              "numberOfPeriods" : 1,
+              "paymentMode" : "payAsYouGo",
+              "referenceName" : "wheel_d15_monthly",
+              "subscriptionPeriod" : "P1M"
+            },
+            {
+              "displayPrice" : "7.19",
+              "eligibility" : [
+                "new"
+              ],
+              "internalID" : "C0DE7F13",
+              "isStackable" : false,
+              "numberOfPeriods" : 1,
+              "paymentMode" : "payAsYouGo",
+              "referenceName" : "wheel_d20_monthly",
+              "subscriptionPeriod" : "P1M"
+            },
+            {
+              "displayPrice" : "6.69",
+              "eligibility" : [
+                "new"
+              ],
+              "internalID" : "C0DE7F14",
+              "isStackable" : false,
+              "numberOfPeriods" : 1,
+              "paymentMode" : "payAsYouGo",
+              "referenceName" : "wheel_d25_monthly",
+              "subscriptionPeriod" : "P1M"
+            },
+            {
+              "displayPrice" : "6.29",
+              "eligibility" : [
+                "new"
+              ],
+              "internalID" : "C0DE7F15",
+              "isStackable" : false,
+              "numberOfPeriods" : 1,
+              "paymentMode" : "payAsYouGo",
+              "referenceName" : "wheel_d30_monthly",
+              "subscriptionPeriod" : "P1M"
+            }
+          ],
+          "displayPrice" : "8.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "A1F00001",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Remote, keyboard, TV apps, photos, mirroring",
+              "displayName" : "Remote Pro Monthly",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "Mando, teclado, apps, fotos y duplicación",
+              "displayName" : "Remote Pro mensual",
+              "locale" : "es_ES"
+            },
+            {
+              "description" : "Пульт, клавиатура, фото и трансляция экрана",
+              "displayName" : "Remote Pro на месяц",
+              "locale" : "ru"
+            },
+            {
+              "description" : "Fernbedienung, Tastatur, Fotos, Spiegelung",
+              "displayName" : "Remote Pro monatlich",
+              "locale" : "de"
+            },
+            {
+              "description" : "Télécommande, clavier, photos et recopie",
+              "displayName" : "Remote Pro mensuel",
+              "locale" : "fr"
+            }
+          ],
+          "productID" : "remote_pro_monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Remote Pro Monthly",
+          "subscriptionGroupID" : "B2E00001",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+            {
+              "eligibility" : [
+                "new"
+              ],
+              "internalID" : "C0DE7F02",
+              "isStackable" : false,
+              "numberOfPeriods" : 1,
+              "paymentMode" : "free",
+              "referenceName" : "wheel_free7_yearly",
+              "subscriptionPeriod" : "P1W"
+            }
+          ],
+          "displayPrice" : "59.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "A1F00002",
+          "introductoryOffer" : {
+            "internalID" : "1A7E0003",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P3D"
+          },
+          "localizations" : [
+            {
+              "description" : "Remote, keyboard, TV apps, photos, mirroring",
+              "displayName" : "Remote Pro Yearly",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "Mando, teclado, apps, fotos y duplicación",
+              "displayName" : "Remote Pro anual",
+              "locale" : "es_ES"
+            },
+            {
+              "description" : "Пульт, клавиатура, фото и трансляция экрана",
+              "displayName" : "Remote Pro на год",
+              "locale" : "ru"
+            },
+            {
+              "description" : "Fernbedienung, Tastatur, Fotos, Spiegelung",
+              "displayName" : "Remote Pro jährlich",
+              "locale" : "de"
+            },
+            {
+              "description" : "Télécommande, clavier, photos et recopie",
+              "displayName" : "Remote Pro annuel",
+              "locale" : "fr"
+            }
+          ],
+          "productID" : "remote_pro_yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Remote Pro Yearly",
+          "subscriptionGroupID" : "B2E00001",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

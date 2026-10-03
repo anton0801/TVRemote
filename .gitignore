@@ -1,0 +1,15 @@
+build/
+DerivedData/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+.DS_Store
+__pycache__/
+*.p8
+
+# App Store Connect API keys (never commit)
+.appstoreconnect/
+
+Website
+Design
+Server
+Documentation

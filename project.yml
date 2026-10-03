@@ -1,0 +1,178 @@
+name: TVRemoteScreenMirroring
+options:
+  bundleIdPrefix: app.TVRemoteScreenMirroring
+  deploymentTarget:
+    iOS: "17.0"
+  developmentLanguage: en
+  createIntermediateGroups: true
+  groupSortPosition: top
+  generateEmptyDirectories: false
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    # Signing team is intentionally empty: the owner sets it locally or via DEVELOPMENT_TEAM env.
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+    SWIFT_EMIT_LOC_STRINGS: NO
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    DEAD_CODE_STRIPPING: YES
+
+packages:
+  Firebase:
+    url: https://github.com/firebase/firebase-ios-sdk
+    exactVersion: 12.19.2
+
+targets:
+  TVRemoteScreenMirroring:
+    type: application
+    platform: iOS
+    sources:
+      - path: TVRemoteScreenMirroring
+        excludes:
+          - "Supporting/Info.plist"
+          - "Resources/StoreKit/**"
+          - "**/*.md"
+      - path: Shared
+    dependencies:
+      - target: BroadcastUpload
+        embed: true
+      - package: Firebase
+        product: FirebaseCore
+      - package: Firebase
+        product: FirebaseAnalyticsCore
+      - package: Firebase
+        product: FirebaseMessaging
+      - package: Firebase
+        product: FirebaseCrashlytics
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.TVRemoteScreenMirroring
+        PRODUCT_NAME: TVRemoteScreenMirroring
+        INFOPLIST_FILE: TVRemoteScreenMirroring/Supporting/Info.plist
+        CODE_SIGN_ENTITLEMENTS: TVRemoteScreenMirroring/Supporting/TVRemoteScreenMirroring.entitlements
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_PREVIEWS: YES
+        DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
+        OTHER_LDFLAGS: ["$(inherited)", "-ObjC"]
+      configs:
+        Debug:
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+    preBuildScripts:
+      - name: Warn about missing owner configuration (Release only)
+        basedOnDependencyAnalysis: false
+        script: |
+          # App Review needs a privacy policy link and a working support contact. Empty values
+          # are allowed while developing; Release builds show a warning for each one.
+          if [ "${CONFIGURATION}" != "Release" ]; then exit 0; fi
+          CONFIG="${SRCROOT}/TVRemoteScreenMirroring/Resources/AppConfig.plist"
+          for KEY in PrivacyPolicyURL SupportEmail AppStoreID; do
+            VALUE=$(/usr/libexec/PlistBuddy -c "Print :${KEY}" "${CONFIG}" 2>/dev/null)
+            if [ -z "${VALUE}" ]; then echo "warning: AppConfig.plist: ${KEY} is empty (see Documentation/RELEASE_CHECKLIST.md)"; fi
+          done
+    postBuildScripts:
+      - name: Upload Crashlytics dSYMs (release builds with Firebase config only)
+        basedOnDependencyAnalysis: false
+        inputFiles:
+          - "${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}"
+          - "${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}"
+          - "${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist"
+          - "$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist"
+          - "$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)"
+        script: |
+          # Runs only for Release builds that actually contain a real GoogleService-Info.plist.
+          if [ "${CONFIGURATION}" != "Release" ]; then exit 0; fi
+          if [ ! -f "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleService-Info.plist" ]; then
+            echo "note: GoogleService-Info.plist not bundled; skipping Crashlytics dSYM upload."
+            exit 0
+          fi
+          RUN_SCRIPT="${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run"
+          if [ -x "${RUN_SCRIPT}" ]; then "${RUN_SCRIPT}"; else echo "warning: Crashlytics run script not found at ${RUN_SCRIPT}"; fi
+
+  BroadcastUpload:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: BroadcastUpload
+        excludes:
+          - "Info.plist"
+      - path: Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.TVRemoteScreenMirroring.BroadcastUpload
+        PRODUCT_NAME: BroadcastUpload
+        INFOPLIST_FILE: BroadcastUpload/Info.plist
+        CODE_SIGN_ENTITLEMENTS: BroadcastUpload/BroadcastUpload.entitlements
+        TARGETED_DEVICE_FAMILY: "1"
+        APPLICATION_EXTENSION_API_ONLY: YES
+        SKIP_INSTALL: YES
+      configs:
+        Debug:
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+    dependencies:
+      - sdk: ReplayKit.framework
+      - sdk: VideoToolbox.framework
+
+  TVRemoteScreenMirroringTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests/Unit
+      - path: TVRemoteScreenMirroring/Resources/StoreKit
+        buildPhase: resources
+    dependencies:
+      - target: TVRemoteScreenMirroring
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.TVRemoteScreenMirroring.Tests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/TVRemoteScreenMirroring.app/TVRemoteScreenMirroring"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+        TARGETED_DEVICE_FAMILY: "1"
+      configs:
+        Debug:
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+
+  TVRemoteScreenMirroringUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: Tests/UI
+      - path: TVRemoteScreenMirroring/Resources/StoreKit
+        buildPhase: resources
+    dependencies:
+      - target: TVRemoteScreenMirroring
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.TVRemoteScreenMirroring.UITests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: TVRemoteScreenMirroring
+        TARGETED_DEVICE_FAMILY: "1"
+
+schemes:
+  TVRemoteScreenMirroring:
+    build:
+      targets:
+        TVRemoteScreenMirroring: all
+        TVRemoteScreenMirroringTests: [test]
+        TVRemoteScreenMirroringUITests: [test]
+    run:
+      config: Debug
+      storeKitConfiguration: TVRemoteScreenMirroring/Resources/StoreKit/RemotePro.storekit
+    test:
+      config: Debug
+      gatherCoverageData: true
+      targets:
+        - name: TVRemoteScreenMirroringTests
+        - name: TVRemoteScreenMirroringUITests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

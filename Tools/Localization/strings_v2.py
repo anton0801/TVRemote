@@ -1,0 +1,226 @@
+# Localization source for the v2 redesign (design kit v2).
+# Kit texts (Design/tv-remote-design-kit-v2/localization/*.json) are imported as "v2.<kit key>";
+# their {name} placeholders become positional %N$@ in English order. Texts the kit doesn't
+# have (honest states, real values) are below in STRINGS_EXTRA. Tuple order: (en, es, ru, de, fr).
+# NOTE: payment and legal wording requires review by a native editor before release.
+import json
+import pathlib
+import re
+
+LANGS = ["en", "es", "ru", "de", "fr"]
+_KIT = pathlib.Path(__file__).resolve().parents[2] / "Design/tv-remote-design-kit-v2/localization"
+_NAME = re.compile(r"\{([A-Za-z]+)\}")
+
+# Kit keys whose wording is used as is. Example values in the kit (5 commands, 3-day trial,
+# dates) are never imported as facts: those screens use STRINGS_EXTRA with real values.
+KIT_KEYS = [
+    "action.continue", "action.skip", "action.back", "action.close", "action.cancel", "action.done", "action.retry",
+    "action.notNow", "action.connect", "action.restore", "action.openSettings",
+    "onboarding.remote.title", "onboarding.remote.body", "onboarding.remote.note",
+    "onboarding.apps.title", "onboarding.apps.body",
+    "onboarding.cast.title", "onboarding.cast.body", "onboarding.cast.cta", "onboarding.cast.note",
+    "connection.title", "connection.sameWifi", "connection.sameWifi.body", "connection.turnOn", "connection.allowNetwork",
+    "connection.networkPurpose", "connection.find", "connection.help",
+    "discovery.title", "discovery.found", "discovery.searching", "discovery.before", "discovery.accept", "discovery.again",
+    "discovery.notListed",
+    "pairing.title", "pairing.enterCode", "pairing.keepOpen", "pairing.newCode", "pairing.allow",
+    "status.connected", "status.offline", "status.ready", "status.receiverNeeded",
+    "compatibility.title", "compatibility.note", "compatibility.try", "compatibility.free",
+    "remote.quickLaunch", "remote.touchpad", "remote.buttons", "remote.swipe", "remote.tap", "remote.home", "remote.keyboard",
+    "remote.volume", "remote.mute",
+    "keyboard.title", "keyboard.instruction", "keyboard.label", "keyboard.send", "keyboard.clear", "keyboard.deleteTV",
+    "apps.title", "apps.search", "apps.favorites", "apps.note",
+    "cast.title", "cast.photos", "cast.videos", "media.photos", "media.videos", "cast.photos.body", "cast.videos.body",
+    "cast.mirror", "cast.mirror.body", "cast.setupNeeded", "cast.nothingAutomatic",
+    "media.position", "media.slideshow", "media.fit", "media.showTV", "media.onlySelected",
+    "video.preview", "video.confirmFirst", "video.nowPlaying", "video.onTV", "cast.stop",
+    "mirror.title", "mirror.network", "mirror.connection", "mirror.receiver", "mirror.privacy", "mirror.continue",
+    "mirror.systemConfirm", "mirror.how", "mirror.active", "mirror.quality", "mirror.auto", "mirror.stop",
+    "pro.name", "pro.explore", "pro.banner", "pro.unlimited", "pro.shortcuts", "pro.sharing",
+    "plan.monthly", "plan.yearly", "plan.lifetime", "plan.monthPrice", "plan.yearPrice", "plan.once",
+    "legal.terms", "legal.privacy",
+    "purchase.success", "purchase.backRemote", "subscription.manage", "subscription.active", "subscription.renews",
+    "subscription.yearly", "subscription.review", "subscription.lifetime", "subscription.cancelSeparate", "subscription.appStore",
+    "settings.savedTVs", "settings.language", "settings.haptics", "settings.notifications", "settings.help",
+    "settings.systemLanguage", "settings.priceRegion",
+    "notifications.allowed", "notifications.service", "notifications.service.body", "notifications.offers",
+    "notifications.offers.body", "notifications.reminder", "notifications.reminder.body", "notifications.change",
+    "notifications.blocked", "notifications.enable", "notifications.after",
+    "support.title", "support.body", "support.topic", "support.message", "support.attachment", "support.diagnostics",
+    "support.review", "support.noPrivate", "support.email", "support.form",
+    "help.title", "help.search", "help.quick", "help.drops",
+    "tv.rename", "tv.forget", "tv.add", "tv.local",
+    "error.connectionLost", "error.lostDevice", "error.reconnect", "error.otherTV", "error.paused", "error.noTV",
+    "error.guestWifi", "error.networkOff",
+    "purchase.pending", "purchase.pending.body", "purchase.check", "purchase.unavailable", "purchase.unavailable.body",
+    "purchase.without",
+    "privacy.intro", "privacy.analytics", "privacy.analytics.body", "privacy.crashes", "privacy.crashes.body",
+    "privacy.optional", "privacy.policy", "privacy.noContent",
+    "receiver.title", "receiver.body", "receiver.guide", "receiver.otherFeatures",
+    "remote.more", "remote.all", "remote.freeCheck", "remote.checkDone", "remote.moreTitle", "remote.channels",
+    "remote.menu", "remote.input", "remote.wake", "remote.numbers", "remote.wakeNote", "remote.unsupported",
+    "mirror.audioLocal", "mirror.pictureOnly", "mirror.qualityTitle", "mirror.high", "mirror.dataSaver",
+    "mirror.autoDescription", "mirror.highDescription", "mirror.saverDescription",
+    "video.selected", "video.selectedBody", "video.add", "video.volumeTVRemote",
+    "pairing.allowTitle", "pairing.allowBody", "pairing.waiting", "pairing.requestAgain",
+    "settings.about", "legal.termsFull",
+    "pro.lifetimeStatus", "pro.lifetimeBody", "pro.olderSubscription", "pro.billingIssue", "pro.accessActive",
+    "pro.accessPaused", "pro.billingBody",
+    "offer.title", "offer.check", "offer.note",
+    "purchase.loadingPlans", "purchase.unconfirmed", "purchase.unconfirmedBody", "purchase.checkStatus", "purchase.backPlans",
+]
+
+
+def _positional(text, order):
+    return _NAME.sub(lambda m: f"%{order.index(m.group(1)) + 1}$@", text)
+
+
+def _load_kit():
+    tables = {lang: json.loads((_KIT / f"{lang}.json").read_text(encoding="utf-8")) for lang in LANGS}
+    result = {}
+    for key in KIT_KEYS:
+        order = _NAME.findall(tables["en"][key])
+        result["v2." + key] = tuple(_positional(tables[lang][key], order) for lang in LANGS)
+    return result
+
+
+STRINGS_EXTRA = {
+    # Remote
+    "remote.title": ("TV Remote", "TV Remote", "TV Remote", "TV Remote", "TV Remote"),
+    "pro.badge.accessibility": ("Remote Pro", "Remote Pro", "Remote Pro", "Remote Pro", "Remote Pro"),
+    "freeCheck.minutesLeft": ("%lld min left", "quedan %lld min", "осталось %lld мин", "noch %lld Min.", "encore %lld min"),
+    "freeCheck.lessThanMinute": ("less than a minute left", "queda menos de un minuto", "осталось меньше минуты", "noch weniger als eine Minute", "moins d’une minute restante"),
+    "remote.more.footer": ("Controls depend on your TV. Keys your TV doesn’t accept are hidden. Wake requires network standby.",
+                           "Los controles dependen de tu TV. Las teclas que tu TV no acepta se ocultan. El encendido requiere espera en red.",
+                           "Набор кнопок зависит от телевизора: неподдерживаемые скрыты. Для включения нужен сетевой режим ожидания.",
+                           "Die Steuerung hängt von deinem TV ab. Tasten, die er nicht annimmt, sind ausgeblendet. Einschalten erfordert Netzwerk-Standby.",
+                           "Les commandes dépendent de votre TV. Les touches non acceptées sont masquées. L’allumage nécessite la veille réseau."),
+    "tv.status.connecting": ("Connecting…", "Conectando…", "Подключение…", "Verbinden…", "Connexion…"),
+    "tv.status.awaitingApproval": ("Awaiting approval", "Esperando aprobación", "Ожидает подтверждения", "Wartet auf Bestätigung", "En attente d’approbation"),
+    "tv.status.reconnecting": ("Reconnecting…", "Reconectando…", "Переподключение…", "Erneut verbinden…", "Reconnexion…"),
+    "tv.status.notConnected": ("Not connected", "No conectada", "Не подключён", "Nicht verbunden", "Non connectée"),
+    "tv.card.hint": ("Shows your TVs to switch or add one.", "Muestra tus TV para cambiar o añadir una.", "Показывает телевизоры: переключить или добавить.",
+                     "Zeigt deine Fernseher zum Wechseln oder Hinzufügen.", "Affiche vos TV pour changer ou en ajouter une."),
+    "tv.card.addFirst": ("Add your TV to start", "Añade tu TV para empezar", "Добавьте телевизор, чтобы начать", "Füge deinen TV hinzu, um zu starten", "Ajoutez votre TV pour commencer"),
+    # TV apps / keyboard
+    "apps.search.empty": ("No apps match your search.", "Ninguna app coincide con la búsqueda.", "Приложения не найдены.", "Keine App passt zu deiner Suche.", "Aucune app ne correspond à la recherche."),
+    "apps.favorite.value": ("In quick launch", "En acceso rápido", "В быстром запуске", "Im Schnellstart", "Dans l’accès rapide"),
+    "common.clear": ("Clear", "Borrar", "Очистить", "Löschen", "Effacer"),
+    "keyboard.counter.accessibility": ("%1$lld of %2$lld characters", "%1$lld de %2$lld caracteres", "%1$lld из %2$lld символов", "%1$lld von %2$lld Zeichen", "%1$lld caractères sur %2$lld"),
+    # Connection
+    "discovery.fix.localNetwork": ("Check local network access", "Revisa el acceso a la red local", "Проверьте доступ к локальной сети", "Lokalen Netzwerkzugriff prüfen", "Vérifiez l’accès au réseau local"),
+    "discovery.fix.localNetwork.detail": ("Allow local network access in Settings.", "Permite el acceso a la red local en Ajustes.", "Разрешите доступ к локальной сети в Настройках.",
+                                          "Erlaube den lokalen Netzwerkzugriff in den Einstellungen.", "Autorisez l’accès au réseau local dans Réglages."),
+    "discovery.fix.guest.detail": ("Use your home Wi‑Fi network.", "Usa la red Wi‑Fi de tu casa.", "Используйте домашнюю сеть Wi‑Fi.", "Nutze dein WLAN zu Hause.", "Utilisez le Wi‑Fi de votre domicile."),
+    "discovery.fix.again": ("Try searching again", "Vuelve a buscar", "Поискать ещё раз", "Erneut suchen", "Relancer la recherche"),
+    "discovery.fix.again.detail": ("Make sure your TV is on and nearby.", "Comprueba que la TV está encendida y cerca.", "Убедитесь, что телевизор включён и рядом.",
+                                   "Achte darauf, dass der TV eingeschaltet und in der Nähe ist.", "Vérifiez que la TV est allumée et à proximité."),
+    "permission.enableLocalNetwork": ("Turn on Local Network for TV Remote", "Activa Red local para TV Remote", "Включите «Локальная сеть» для TV Remote",
+                                      "Aktiviere „Lokales Netzwerk“ für TV Remote", "Activez Réseau local pour TV Remote"),
+    "pairing.step.keepOn": ("Keep your TV on", "Mantén la TV encendida", "Не выключайте телевизор", "Lass den TV eingeschaltet", "Laissez la TV allumée"),
+    "pairing.step.keepOn.detail": ("Keep your TV on and connected to the same Wi‑Fi.", "Mantén la TV encendida y en la misma red Wi‑Fi.", "Телевизор должен быть включён и в той же сети Wi‑Fi.",
+                                   "Lass den TV eingeschaltet und im selben WLAN.", "Laissez la TV allumée et sur le même Wi‑Fi."),
+    "pairing.step.accept": ("Accept the connection request", "Acepta la solicitud de conexión", "Примите запрос на подключение", "Verbindungsanfrage annehmen", "Acceptez la demande de connexion"),
+    "compat.setupMirroring": ("Set up screen mirroring", "Configurar duplicar pantalla", "Настроить трансляцию экрана", "Bildschirmspiegelung einrichten", "Configurer la recopie de l’écran"),
+    "connection.lost.sameWifi": ("Check that both devices use the same Wi‑Fi", "Comprueba que ambos usan la misma Wi‑Fi", "Проверьте, что оба устройства в одной сети Wi‑Fi",
+                                 "Prüfe, ob beide Geräte im selben WLAN sind", "Vérifiez que les deux appareils sont sur le même Wi‑Fi"),
+    # Cast
+    "cast.slideshow.every": ("Next photo every %lld s", "Siguiente foto cada %lld s", "Следующее фото каждые %lld с", "Nächstes Foto alle %lld s", "Photo suivante toutes les %lld s"),
+    "cast.slideshow.proOnly": ("Available with Remote Pro", "Disponible con Remote Pro", "Доступно в Remote Pro", "Mit Remote Pro verfügbar", "Disponible avec Remote Pro"),
+    "cast.video.addDetail": ("Choose more videos from your library.", "Elige más vídeos de tu biblioteca.", "Выберите ещё видео из медиатеки.",
+                             "Wähle weitere Videos aus deiner Mediathek.", "Choisissez d’autres vidéos de votre photothèque."),
+    "cast.video.number": ("Video %lld", "Vídeo %lld", "Видео %lld", "Video %lld", "Vidéo %lld"),
+    "cast.video.remove": ("Remove video %lld", "Quitar vídeo %lld", "Убрать видео %lld", "Video %lld entfernen", "Retirer la vidéo %lld"),
+    "cast.video.back10": ("Back 10 seconds", "Retroceder 10 segundos", "Назад на 10 секунд", "10 Sekunden zurück", "Reculer de 10 secondes"),
+    "cast.video.forward10": ("Forward 10 seconds", "Avanzar 10 segundos", "Вперёд на 10 секунд", "10 Sekunden vor", "Avancer de 10 secondes"),
+    "cast.volume.onTV": ("Volume is adjusted on your TV.", "El volumen se ajusta en tu TV.", "Громкость меняется на телевизоре.", "Die Lautstärke wird am TV geändert.", "Le volume se règle sur votre TV."),
+    "mirroring.setup.notReady": ("Check", "Revisar", "Проверьте", "Prüfen", "À vérifier"),
+    "mirroring.visibleNote": ("Everything visible on your iPhone may appear on your TV.", "Todo lo visible en tu iPhone puede aparecer en tu TV.",
+                              "Всё, что видно на iPhone, может появиться на телевизоре.", "Alles auf deinem iPhone kann auf dem TV erscheinen.",
+                              "Tout ce qui est visible sur l’iPhone peut apparaître sur la TV."),
+    "mirroring.quality.lead": ("Choose the picture quality for screen mirroring to your TV.", "Elige la calidad de imagen para duplicar la pantalla en tu TV.",
+                               "Выберите качество изображения для трансляции экрана.", "Wähle die Bildqualität für die Spiegelung auf deinen TV.",
+                               "Choisissez la qualité d’image pour la recopie sur votre TV."),
+    # Help
+    "help.article.navTitle": ("Connection help", "Ayuda", "Справка", "Hilfe", "Aide"),
+    "help.quickFix.detail": ("Try these steps to fix it", "Prueba estos pasos para resolverlo", "Попробуйте эти шаги", "Probiere diese Schritte aus", "Essayez ces étapes"),
+    "help.search.empty": ("Nothing found. Try other words or contact us.", "Sin resultados. Prueba otras palabras o escríbenos.", "Ничего не найдено. Попробуйте другие слова или напишите нам.",
+                          "Nichts gefunden. Versuche andere Wörter oder schreib uns.", "Aucun résultat. Essayez d’autres mots ou contactez-nous."),
+    "help.topic.connect": ("Connect your TV", "Conecta tu TV", "Подключение телевизора", "TV verbinden", "Connecter votre TV"),
+    "help.topic.connect.detail": ("Set up and pair your TV", "Configura y vincula tu TV", "Настройка и сопряжение", "TV einrichten und koppeln", "Configurer et associer votre TV"),
+    "help.topic.remote": ("Remote & keyboard", "Mando y teclado", "Пульт и клавиатура", "Fernbedienung & Tastatur", "Télécommande et clavier"),
+    "help.topic.remote.detail": ("Buttons, typing and TV apps", "Botones, escritura y apps de la TV", "Кнопки, ввод текста и приложения ТВ", "Tasten, Texteingabe und TV-Apps", "Touches, saisie et apps de la TV"),
+    "help.topic.media": ("Photos, videos & mirroring", "Fotos, vídeos y duplicar pantalla", "Фото, видео и трансляция", "Fotos, Videos & Spiegelung", "Photos, vidéos et recopie"),
+    "help.topic.media.detail": ("Cast and mirror from your iPhone", "Comparte y duplica desde el iPhone", "Показ с iPhone на телевизоре", "Vom iPhone teilen und spiegeln", "Partager et recopier depuis l’iPhone"),
+    "help.topic.purchases": ("Purchases & subscriptions", "Compras y suscripciones", "Покупки и подписки", "Käufe & Abos", "Achats et abonnements"),
+    "help.topic.purchases.detail": ("Manage your plan and billing", "Gestiona tu plan y facturación", "План и оплата", "Plan und Abrechnung verwalten", "Gérer votre forfait et la facturation"),
+    "help.topic.privacy": ("Privacy", "Privacidad", "Конфиденциальность", "Datenschutz", "Confidentialité"),
+    "help.topic.privacy.detail": ("What the app handles and your choices", "Qué trata la app y tus opciones", "Какие данные и ваш выбор", "Was die App verarbeitet und deine Wahl", "Ce que traite l’app et vos choix"),
+    # Settings
+    "settings.group.preferences": ("Preferences", "Preferencias", "Предпочтения", "Einstellungen", "Préférences"),
+    "settings.group.support": ("Support", "Soporte", "Поддержка", "Support", "Assistance"),
+    "settings.savedTVs.detail": ("Manage your connected TVs", "Gestiona tus TV conectadas", "Управление подключёнными ТВ", "Verbundene Fernseher verwalten", "Gérer vos TV connectées"),
+    "settings.language.systemValue": ("System (%@)", "Sistema (%@)", "Системный (%@)", "System (%@)", "Système (%@)"),
+    "settings.haptics.detail": ("Play a haptic response on touch", "Vibración al tocar", "Отклик вибрацией при нажатии", "Haptisches Feedback beim Tippen", "Retour haptique au toucher"),
+    "settings.help.detail": ("Find answers and get help", "Encuentra respuestas y ayuda", "Ответы и помощь", "Antworten und Hilfe", "Réponses et aide"),
+    "settings.contact.detail": ("Write to us about a problem", "Escríbenos sobre un problema", "Напишите нам о проблеме", "Schreib uns zu einem Problem", "Écrivez-nous à propos d’un problème"),
+    "settings.restore.detail": ("Recover your Pro features", "Recupera tus funciones Pro", "Вернуть функции Pro", "Pro-Funktionen wiederherstellen", "Récupérer vos fonctions Pro"),
+    "settings.terms.detail": ("Legal information", "Información legal", "Правовая информация", "Rechtliche Informationen", "Informations légales"),
+    "settings.privacyPolicy.detail": ("How we handle your data", "Cómo tratamos tus datos", "Как мы обращаемся с данными", "Wie wir mit deinen Daten umgehen", "Comment nous traitons vos données"),
+    "notifications.types": ("Notification types", "Tipos de notificación", "Типы уведомлений", "Mitteilungsarten", "Types de notifications"),
+    "notifications.openIOSSettings": ("Open iOS settings", "Abrir Ajustes de iOS", "Открыть настройки iOS", "iOS-Einstellungen öffnen", "Ouvrir les réglages iOS"),
+    "notifications.openIOSSettings.detail": ("Manage notification permissions in iOS", "Gestiona los permisos de notificación en iOS", "Разрешения уведомлений в iOS",
+                                             "Mitteilungsberechtigungen in iOS verwalten", "Gérer les autorisations de notification dans iOS"),
+    "notifications.offersOptional": ("Offers stay optional.", "Las ofertas son siempre opcionales.", "Предложения всегда необязательны.", "Angebote bleiben optional.", "Les offres restent facultatives."),
+    "privacy.reviewDiagnostics": ("Review diagnostic details", "Revisar datos de diagnóstico", "Посмотреть диагностику", "Diagnosedaten ansehen", "Voir les données de diagnostic"),
+    "privacy.diagnostics.empty": ("The technical log is empty.", "El registro técnico está vacío.", "Технический журнал пуст.", "Das technische Protokoll ist leer.", "Le journal technique est vide."),
+    # Paywall
+    "paywall.per.month": ("/ month", "/ mes", "/ месяц", "/ Monat", "/ mois"),
+    "paywall.per.year": ("/ year", "/ año", "/ год", "/ Jahr", "/ an"),
+    "paywall.trialFree": ("%@ free", "%@ gratis", "%@ бесплатно", "%@ gratis", "%@ offerts"),
+    "paywall.loadingShort": ("Loading…", "Cargando…", "Загрузка…", "Wird geladen …", "Chargement…"),
+    "purchase.pending.note": ("Your access updates after confirmation.", "Tu acceso se actualizará tras la confirmación.", "Доступ обновится после подтверждения.",
+                              "Dein Zugang wird nach der Bestätigung aktualisiert.", "Votre accès sera mis à jour après confirmation."),
+    "purchase.success.trialActive": ("Your Remote Pro trial is active: %@ free.", "Tu prueba de Remote Pro está activa: %@ gratis.", "Пробный период Remote Pro активен: %@ бесплатно.",
+                                     "Deine Remote Pro-Testphase ist aktiv: %@ gratis.", "Votre essai Remote Pro est actif : %@ offerts."),
+    "purchase.success.active": ("Remote Pro is active.", "Remote Pro está activo.", "Remote Pro активен.", "Remote Pro ist aktiv.", "Remote Pro est actif."),
+    "purchase.success.afterTrial": ("%@ after the trial", "%@ tras la prueba", "%@ после пробного периода", "%@ nach der Testphase", "%@ après l’essai"),
+    "purchase.success.manageNote": ("Manage or cancel in App Store settings.", "Gestiona o cancela en los ajustes de App Store.", "Управлять и отменить можно в настройках App Store.",
+                                    "Verwalten oder kündigen in den App Store-Einstellungen.", "Gérez ou résiliez dans les réglages de l’App Store."),
+    "purchase.success.sharingNote": ("Sharing starts only when you choose it.", "Compartir solo empieza cuando lo eliges.", "Показ начнётся, только когда вы решите.",
+                                     "Teilen startet nur, wenn du es auswählst.", "Le partage ne démarre que lorsque vous le choisissez."),
+    # Remote Pro
+    "pro.planName.monthly": ("Monthly plan", "Plan mensual", "Месячный план", "Monatsplan", "Forfait mensuel"),
+    "pro.planName.yearly": ("Yearly plan", "Plan anual", "Годовой план", "Jahresplan", "Forfait annuel"),
+    "pro.planName.lifetime": ("Lifetime access", "Acceso de por vida", "Доступ навсегда", "Dauerzugang", "Accès à vie"),
+    "pro.allFeatures": ("You have access to all Pro features.", "Tienes acceso a todas las funciones Pro.", "Вам доступны все функции Pro.",
+                        "Du hast Zugriff auf alle Pro-Funktionen.", "Vous avez accès à toutes les fonctions Pro."),
+    "pro.yourPlan": ("Your plan", "Tu plan", "Ваш план", "Dein Plan", "Votre forfait"),
+    "pro.otherPlans": ("Other plans", "Otros planes", "Другие планы", "Andere Pläne", "Autres forfaits"),
+    "pro.manageGroup": ("Manage", "Gestionar", "Управление", "Verwalten", "Gérer"),
+    "pro.freeTrial": ("Free trial", "Prueba gratuita", "Пробный период", "Kostenlose Testphase", "Essai gratuit"),
+    "pro.trialEnjoying": ("You’re enjoying Remote Pro.", "Estás disfrutando de Remote Pro.", "Вы пользуетесь Remote Pro.", "Du nutzt Remote Pro.", "Vous profitez de Remote Pro."),
+    "pro.thenPrice": ("Then %@", "Luego %@", "Затем %@", "Danach %@", "Puis %@"),
+    "pro.trialEndsTitle": ("Trial ends", "La prueba termina", "Пробный период заканчивается", "Testphase endet", "Fin de l’essai"),
+    "pro.renewsAuto": ("Renews automatically", "Se renueva automáticamente", "Продлевается автоматически", "Verlängert sich automatisch", "Renouvellement automatique"),
+    "pro.renewsAuto.detail": ("Unless canceled.", "Salvo que la canceles.", "Если не отменить.", "Sofern nicht gekündigt.", "Sauf résiliation."),
+    "pro.renewOff": ("Won’t renew", "No se renovará", "Не продлится", "Wird nicht verlängert", "Ne sera pas renouvelé"),
+    "pro.renewOff.detail": ("Access ends with the trial.", "El acceso termina con la prueba.", "Доступ закончится вместе с пробным периодом.",
+                            "Der Zugang endet mit der Testphase.", "L’accès se termine avec l’essai."),
+    "pro.lifetimeOnce": ("%@ once", "%@ una vez", "%@ один раз", "%@ einmalig", "%@ en une fois"),
+    "pro.allFeaturesTitle": ("All Pro features", "Todas las funciones Pro", "Все функции Pro", "Alle Pro-Funktionen", "Toutes les fonctions Pro"),
+    "pro.feature.control": ("Control your TV", "Controla tu TV", "Управление телевизором", "Steuere deinen TV", "Contrôlez votre TV"),
+    "pro.feature.control.detail": ("Full remote, touchpad, keyboard", "Mando completo, panel táctil y teclado", "Полный пульт, тачпад, клавиатура",
+                                   "Volle Fernbedienung, Touchpad, Tastatur", "Télécommande complète, pavé tactile, clavier"),
+    "pro.feature.photos.detail": ("Send photos to your TV", "Envía fotos a tu TV", "Фото на телевизоре", "Fotos an den TV senden", "Envoyez des photos sur la TV"),
+    "pro.feature.videos.detail": ("Play videos from your phone", "Reproduce vídeos desde el teléfono", "Видео с телефона", "Videos vom Telefon abspielen", "Lisez des vidéos depuis le téléphone"),
+    "pro.feature.premium": ("Premium features", "Funciones premium", "Расширенные функции", "Premium-Funktionen", "Fonctions premium"),
+    "pro.feature.premium.detail": ("Available Pro features on supported TVs", "Funciones Pro disponibles en TV compatibles", "Доступные функции Pro на поддерживаемых ТВ",
+                                   "Verfügbare Pro-Funktionen auf unterstützten TVs", "Fonctions Pro disponibles sur les TV compatibles"),
+    "pro.graceBody": ("You’re in a grace period. All Pro features are available right now.", "Estás en un periodo de gracia. Todas las funciones Pro están disponibles ahora.",
+                      "Действует льготный период. Все функции Pro сейчас доступны.", "Du bist in einer Kulanzfrist. Alle Pro-Funktionen sind gerade verfügbar.",
+                      "Vous êtes dans une période de grâce. Toutes les fonctions Pro sont disponibles."),
+}
+
+STRINGS = {**_load_kit(), **STRINGS_EXTRA}
+PLURALS = {}

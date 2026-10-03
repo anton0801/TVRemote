@@ -1,0 +1,1656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01BB11B701BD651CCE063507 /* HelpCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CB97DC23C790E5F5DFCAA6 /* HelpCenterView.swift */; };
+		02302DD63F15C394A5101D0E /* WakeOnLAN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985584681A01CDD007C6FDAF /* WakeOnLAN.swift */; };
+		02BF725346065D3CFDCFF66C /* MirroringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E93CF3416F07B755A719F4B /* MirroringController.swift */; };
+		032495344D30A56C35AE6FB5 /* LocalHTTPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C103AC4D3E26A58634F6E /* LocalHTTPServer.swift */; };
+		0359B6E34CF1C8AC14ABE4A4 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CC069D172B239B9BA4546 /* Components.swift */; };
+		050AE9B468372BC29ECB9D2C /* TextInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BE9B38E7F314A71006F63F /* TextInputController.swift */; };
+		05DBB75B4E7621D9F7D83EF1 /* AndroidTVAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2950527371B4716DF38B9367 /* AndroidTVAdapter.swift */; };
+		0C3CDE62E6558228069A5743 /* RemotePro.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 5E6222C67076EEB73E6A9003 /* RemotePro.storekit */; };
+		0CB55E23F17E6B0109E1CE61 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B310B775EDDE9A1D93EBC8 /* AnalyticsService.swift */; };
+		0DECC2EC0972F7ACF8173A0D /* EntitlementResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220D9154E0266506502C2D1C /* EntitlementResolverTests.swift */; };
+		10C3C1EA7E23616662CCE244 /* MediaRendererController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7695EB9FEB12FBC63C8FEB7A /* MediaRendererController.swift */; };
+		119374D461AFE4FEEFAC7C08 /* PurchaseSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE2D0068D1C34EF26FB164 /* PurchaseSuccessView.swift */; };
+		159067DE1BF659A4ECA5C580 /* ClientIdentityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AAFE301E1C9F48468A4C8 /* ClientIdentityStore.swift */; };
+		1AE27E9EAD68A29CF4C4D07F /* DiagnosticsLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D1F5578C2929D671DCB3E3 /* DiagnosticsLog.swift */; };
+		1BFA1BC0ACA303ABD44E728B /* SettingsComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFA3120E2066DAC85BBE63 /* SettingsComponents.swift */; };
+		1DB446ABF8CE934569DFAE4C /* DiagnosticAllowance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF6D2A358563F6402FCE7C3 /* DiagnosticAllowance.swift */; };
+		20237C4B1F5FFD41CB1F6A81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B87C791062B5BB526F8ABD1A /* GoogleService-Info.plist */; };
+		206BC8500803A5FB99B55F43 /* MediaCastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF587B81DA22D6FE768A0694 /* MediaCastController.swift */; };
+		212DB54558C86D5A8A94F8FE /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9E000C6EF59A675682C52867 /* PrivacyInfo.xcprivacy */; };
+		2380F577132D4B6D0FE298F5 /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCA0C5A6A75E3F47DC104D2 /* OnboardingFlow.swift */; };
+		244BC74B4C3B0912B00D14BE /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 65896A480453A97FD7DE4F46 /* FirebaseCrashlytics */; };
+		28465502090F027F43940EE7 /* EntitlementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CAE505D400E75E135C2E9 /* EntitlementModel.swift */; };
+		336A2A52191394A4CAD15A6A /* ReceiverPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276464C7E9152E0A6C1DF1F6 /* ReceiverPage.swift */; };
+		3550212D6925CDC2027E9B78 /* RemoteProView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBB4098F9DC39013E7D516C /* RemoteProView.swift */; };
+		35CEAFDF308D1C6E60DC6607 /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AC33BD5177109DE1B9C73B /* NotificationSettingsView.swift */; };
+		35FDBA0155A9E7C5D3B78551 /* UPnPDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880DD3F43DD9BE0CDA935E0F /* UPnPDevice.swift */; };
+		38E53020F6D93EF04F5E131C /* ContactSupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED2EE305E31B180678DC920 /* ContactSupportView.swift */; };
+		39BCBE6845B920008D66F522 /* BroadcastUpload.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0DFA1EDF273ECEE9FDED2A36 /* BroadcastUpload.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3C7D122997A360F8A1A6DF6D /* RedesignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46AA63D5A8C7B12715E2A1 /* RedesignTests.swift */; };
+		3E161C1EE22E550E7D87B8C4 /* ReceiverPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276464C7E9152E0A6C1DF1F6 /* ReceiverPage.swift */; };
+		3EA694970F24AE4F14EF7AC1 /* JSONFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB40AA7036EE4F158F3AA0C7 /* JSONFileStore.swift */; };
+		4008E048ACC6D3C804FE5A23 /* OnceFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA33B980BC31C0488FF5864 /* OnceFlag.swift */; };
+		40CC7AC1AB70665EA32C9613 /* TVAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7A8302496CCB9CB3EF603 /* TVAdapter.swift */; };
+		4691059ABB20B5540203D0E9 /* TVStatusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49613B5E6E0D9A475D2B57B4 /* TVStatusCard.swift */; };
+		47091080E68AD233EA49D47F /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318D3258642250EBD91B63CE /* WebSocketClient.swift */; };
+		47ECA5B9898A831B8AB2C990 /* LocalNetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC047FA1FC4FAFA5D841292 /* LocalNetworkInfo.swift */; };
+		4E1A865739C07024E8A7929B /* DesignStatesGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9F7DDEF42F95AE6240D13 /* DesignStatesGallery.swift */; };
+		50E7E35F9A73F54F155FBFA8 /* MirroringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ABA0550554D187145EA210 /* MirroringView.swift */; };
+		511BD687DDB0AEA6F2296DF6 /* KeyHoldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C2ACB11ACF354976FF81F7 /* KeyHoldController.swift */; };
+		52638313848404FFE0CBCB24 /* LocalHTTPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C103AC4D3E26A58634F6E /* LocalHTTPServer.swift */; };
+		543F07921CC0CA14C9277663 /* HelpArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA7DA603B2F19B0225AE51 /* HelpArticle.swift */; };
+		5501792A2CF2094F221512C0 /* TVAppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01720DE7EA5515993C052EF /* TVAppsController.swift */; };
+		58DCE9E0D9F7006B8134CD5E /* TextAndCodecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021FC4BBEB59675F71FB8339 /* TextAndCodecTests.swift */; };
+		59F8E557A5B79F315F8B18F6 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B365D3A8BFAB1AFFEC2A523 /* Theme.swift */; };
+		5B1C38A8173B9F94BD69DBCA /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834E17CB1CC36C38FAB63440 /* ReplayKit.framework */; };
+		5D00CDF9A7253F4D8EB2F610 /* BonusCampaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD163804A6DF01889291919C /* BonusCampaign.swift */; };
+		5D839F62C1BE0B8967DA31C9 /* TVAppCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CFE351A6E93311AD279DA /* TVAppCatalog.swift */; };
+		5E28C8EAD34200FE7D315C0C /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECCE998611F31E34A97597E /* AppConfiguration.swift */; };
+		6263786B5C04F4D202A65FFC /* Protobuf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582C4CE0A49756F9F5E61C92 /* Protobuf.swift */; };
+		643B8E54EF2B2F2FB9E40809 /* MediaPreparation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F39CE0A9E584CAEF169F4C /* MediaPreparation.swift */; };
+		65C109E283E5996BC3D16C55 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1B5B4005E4D1FEBF4F35EF /* PaywallView.swift */; };
+		699E4B4573F4986EB49FCDC2 /* OfferCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F46297EC89B0C5070F7746 /* OfferCodeService.swift */; };
+		6DEF5B3A8150046940700ACD /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91011CB7877E8325C3FC5C56 /* Typography.swift */; };
+		720121CC1DA512A9CDA107E7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 1422B3A9CC1C43FA3DB93981 /* FirebaseMessaging */; };
+		723FA2F930913F7D30C38E34 /* BonusFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFBD1C72A2DBBE4E196C05 /* BonusFlowView.swift */; };
+		73A1D669487CE50FEE94C4A3 /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F1C90DCD4E2FB2E77BAF0 /* AnalyticsEvent.swift */; };
+		742C3AB22E940C2DFED2794A /* CompatibilityChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6B85853A3ECE01985E4A4C /* CompatibilityChecker.swift */; };
+		7535D7B08EA23AF0F989D1E0 /* OnceFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA33B980BC31C0488FF5864 /* OnceFlag.swift */; };
+		793D55C5CF9108AE4932E941 /* PairingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB301540BC351EC0D55F88EC /* PairingViews.swift */; };
+		7B4D96EBBBB5B4F23D8E5F64 /* ErrorViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE5E4A97786A6370F716F5 /* ErrorViews.swift */; };
+		7EFC33C3BE531A020EBB6181 /* DarwinObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C87AFA2CF499AC5D18DCB21 /* DarwinObserver.swift */; };
+		80639D4D6847FD54C145B808 /* EntitlementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEE67716DC0A0CD6C5E836 /* EntitlementService.swift */; };
+		80B5894D18A7E44FB9C74EB3 /* FrameEncoderSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331FFBE9B5383971436F86A5 /* FrameEncoderSizing.swift */; };
+		83047D7538BAC360ADCE6578 /* TLSStreamConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23F05CF4FF149253F37BD1F /* TLSStreamConnection.swift */; };
+		839DAD3B72ADCEC248A149B6 /* DiscoveryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC14D32891C972CDDB56F7A4 /* DiscoveryService.swift */; };
+		8B6EFD9BAACAAC8ED62BEEF3 /* SamsungAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFD17E687339AA496127F29 /* SamsungAdapter.swift */; };
+		8DEF4E9CEDBEEAA655B98B3B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 5D85D7CB45315F8F08A009BE /* PrivacyInfo.xcprivacy */; };
+		8E68C4DCEF377EB4129A25F6 /* TVProber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CF0584D1AFFA313F016DB /* TVProber.swift */; };
+		8E8F3D5FB1CEF528BDD48D0D /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150F3F1482BBD48D50FDB38 /* NotificationService.swift */; };
+		8F2008CE307074C50018F533 /* MySubscriptionsInApp.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 8F2008CD307074C50018F533 /* MySubscriptionsInApp.storekit */; };
+		8F2D664CD83D20A660B1612C /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF6DE4C115B7E6320E87387 /* FirebaseCore */; };
+		9012229E03757992F85DCE67 /* AppConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF22D108CB9923D86E93E059 /* AppConfig.plist */; };
+		975E2F1C8FF3F7CCA7420D9F /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5042CE738A49E4FC3FDAA569 /* AppModel.swift */; };
+		97FB032485F72BDDC27FF52D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D248543F9984949E9ED30F8C /* KeyboardView.swift */; };
+		98B189B341017AA814537639 /* SSDPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F6525E24D2D15FBDAE7D7E /* SSDPClient.swift */; };
+		997ED55C99AE9AD9ED38F8BD /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3629DC5B888D8B38F5206100 /* InfoPlist.xcstrings */; };
+		99EE87783905A22152E2ECD9 /* AndroidTVPairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C73CC7111773673AD67B02 /* AndroidTVPairing.swift */; };
+		9A0F9F72C92EE5FEA0C7700D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7B85207935408884448B669E /* Localizable.xcstrings */; };
+		9BA20A892329B2511BAC62CD /* TVRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4340D1AF48A271EDFF2912EA /* TVRemoteApp.swift */; };
+		9EC55BB0B61E841CF5828AB4 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214F914D7EC5667681C6139B /* SettingsScreen.swift */; };
+		9FA1933D727335DCB00EC09A /* RemotePro.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 5E6222C67076EEB73E6A9003 /* RemotePro.storekit */; };
+		9FFF8E0D5E7C7CFCF94E2C94 /* TVCapabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB190D2253320CEAEC6299 /* TVCapabilities.swift */; };
+		A12CD0906C49FDC1E9A3C68C /* CertificatePinning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6792F498DF508122A9308D /* CertificatePinning.swift */; };
+		A267C35E45ED747450A9E6CD /* CommandPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944D62DAD81664706B89A6BE /* CommandPipeline.swift */; };
+		A54C2A5D4260F1BF21490BAF /* ScreenshotTourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D79ED6D511EAFDE90A208 /* ScreenshotTourUITests.swift */; };
+		A567A7FF480E95789FEC8D6C /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = BF2BA8511B1CDB4D4340255B /* FirebaseAnalyticsCore */; };
+		A6F44CF96E10FDF58166FD43 /* AppTiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D76A4C686F8E7AFFD0D3F /* AppTiles.swift */; };
+		A74821135E58452C8BF43E73 /* RemoteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166746154BE82FF2F5B5435D /* RemoteScreen.swift */; };
+		ABC1CABCDAA1C09BADD33D70 /* DarwinObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C87AFA2CF499AC5D18DCB21 /* DarwinObserver.swift */; };
+		AC37A65FC0FC1771B166EFB7 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39F09AF41DD7BEDFB4D711 /* Localization.swift */; };
+		AC5CCC3E3328DAE1A721AF94 /* FrameEncoderSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331FFBE9B5383971436F86A5 /* FrameEncoderSizing.swift */; };
+		ACBD9945199C80180D7CD495 /* TVDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56CBB26E9AD1FB0A1251365 /* TVDevice.swift */; };
+		AD3FDC1FBB67361594F383AE /* FrameStreamServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406BD8B98BAF7CBD37653547 /* FrameStreamServer.swift */; };
+		BDEB7513DD7CBCDCBFEA3BEE /* ServerAndRemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A482F4D00D30ACA35E3163 /* ServerAndRemoteTests.swift */; };
+		C1EC145D9142B0121B01BA0F /* BonjourBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D43B0998F426D2DE1ADC485 /* BonjourBrowser.swift */; };
+		C1EF0EFE36DEB2E154D0DBD0 /* LocalNetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC047FA1FC4FAFA5D841292 /* LocalNetworkInfo.swift */; };
+		C2B720BE41EE46BABDDA70C8 /* FrameEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A5DA60AB9C8D7B028E7F5 /* FrameEncoder.swift */; };
+		C36675AB424659F65E481903 /* OnboardingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED8C8904A13AD1F0B660456 /* OnboardingUITests.swift */; };
+		C60E47E4B19977E601ACC10D /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A73CB5DB1B4E750A9BBC15 /* StoreService.swift */; };
+		C6A48F3A2DFA689D04556E74 /* TVIconStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2BC4C1E17A99B79CD6E4A5 /* TVIconStore.swift */; };
+		CB3C58D12007D9E966C0C0D3 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE616DE9DFD778FD8F4C6006 /* VideoToolbox.framework */; };
+		CBA779361022F5605AD16573 /* RemoteKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23567E41411F89A2F4D2E1A /* RemoteKeys.swift */; };
+		CC5664AE541699C052E3E776 /* Illustrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1B86590D27012D88C4AC5 /* Illustrations.swift */; };
+		CDBB68426C16CEC285B15FAF /* LANHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB8BED70AF4DF7FB8D98E3 /* LANHTTPClient.swift */; };
+		D008F23EA611147492FDCF04 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F524C884688A060B65376423 /* DiscoveryView.swift */; };
+		D05F0621AB5C19CFFBE87A38 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C515F9E615EB1EDDE11DE6 /* AppError.swift */; };
+		D3D612894C623504912D69E9 /* MirroringShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A76DEEF59CC438469C55789 /* MirroringShared.swift */; };
+		D47D6B7F83C146A5CABB4925 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7835194FA1F924F004BB352 /* RootView.swift */; };
+		D6117D62084C726DFA428D4F /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14273011AE75BD24F0ECF5EC /* AppSettings.swift */; };
+		D6922C37AD5BCAF39BF57D9A /* StoreKitIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFD9FBC9BB0278147923306 /* StoreKitIntegrationTests.swift */; };
+		D878D8F187EBF4582C2BB4C5 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24003E0F1A0C479D8381C52 /* SampleHandler.swift */; };
+		DA240627F007E44993C8E573 /* CastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D187148CA699EDC1A9AD34 /* CastScreen.swift */; };
+		DAE37D0873D634B55E62609D /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21BDC4E5756EC351B926018 /* KeychainStore.swift */; };
+		DC4768F04B9FA37486E6E6A8 /* RemoteCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE3BF1379B5713912CD0D94 /* RemoteCommand.swift */; };
+		DDF052DC1573F342E170D951 /* LGAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAB7CB55668BB5DF410488 /* LGAdapter.swift */; };
+		DEE113B76735BFB43EF16A53 /* BonusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D448E9B7B820F77A1C259372 /* BonusController.swift */; };
+		E1B988F1D4C02B6B7EA56534 /* PairingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0446F397D9B904E5B53D58 /* PairingCoordinator.swift */; };
+		E310E859CF3B07DFD6151D78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F02C0EC38B23A79A98A976B2 /* Assets.xcassets */; };
+		E862844802494D44895DF6E4 /* SupportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41295BD375E617037B1E22C9 /* SupportService.swift */; };
+		ECCFA130B189AD6CF11FB77E /* FirebaseBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5E4410A79546177988B5C5 /* FirebaseBootstrap.swift */; };
+		F42D26485EA847FD1F23BE79 /* TVAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BBA84E45C1D74AC5A43302 /* TVAppsView.swift */; };
+		F492842FF1F0BF389D9B30DA /* MirroringShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A76DEEF59CC438469C55789 /* MirroringShared.swift */; };
+		F6384CD2BDCEBF3AA1F16950 /* DeviceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83545CC0665775DC0A4FBF0 /* DeviceStore.swift */; };
+		F6B306C5124878574A041234 /* PolicyAndLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7676DC80C6896F0D97EEE5A /* PolicyAndLocalizationTests.swift */; };
+		F7C2BAB601B5A9CC78B928E6 /* PaywallPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFD57306865F498852ECB2D /* PaywallPresenter.swift */; };
+		FC294DA7AA9A3822789781F5 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE25198385BD6335188997 /* ConnectionManager.swift */; };
+		FF9DCEE3C49507533451672E /* DemoTVSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E27543066BD68B17D2A1091 /* DemoTVSession.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		91C3E215B03BD7763C2849A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E69049E21E2B55D0116B993E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 978A45FFD1334C0085083067;
+			remoteInfo = TVRemoteScreenMirroring;
+		};
+		D54E46FE703B0E63F6D4F1A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E69049E21E2B55D0116B993E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88F50DC82233850349F1AC2B;
+			remoteInfo = BroadcastUpload;
+		};
+		D8922395DB29BA6107F1EC1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E69049E21E2B55D0116B993E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 978A45FFD1334C0085083067;
+			remoteInfo = TVRemoteScreenMirroring;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ECBFFCD9AAF72CC84BD5434D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				39BCBE6845B920008D66F522 /* BroadcastUpload.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		021FC4BBEB59675F71FB8339 /* TextAndCodecTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAndCodecTests.swift; sourceTree = "<group>"; };
+		03F46297EC89B0C5070F7746 /* OfferCodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCodeService.swift; sourceTree = "<group>"; };
+		042AAFE301E1C9F48468A4C8 /* ClientIdentityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientIdentityStore.swift; sourceTree = "<group>"; };
+		0C87AFA2CF499AC5D18DCB21 /* DarwinObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarwinObserver.swift; sourceTree = "<group>"; };
+		0CC047FA1FC4FAFA5D841292 /* LocalNetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkInfo.swift; sourceTree = "<group>"; };
+		0D1B5B4005E4D1FEBF4F35EF /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		0DFA1EDF273ECEE9FDED2A36 /* BroadcastUpload.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BroadcastUpload.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E0446F397D9B904E5B53D58 /* PairingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingCoordinator.swift; sourceTree = "<group>"; };
+		14273011AE75BD24F0ECF5EC /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		14B310B775EDDE9A1D93EBC8 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		166746154BE82FF2F5B5435D /* RemoteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteScreen.swift; sourceTree = "<group>"; };
+		17E9F7DDEF42F95AE6240D13 /* DesignStatesGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignStatesGallery.swift; sourceTree = "<group>"; };
+		1A76DEEF59CC438469C55789 /* MirroringShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirroringShared.swift; sourceTree = "<group>"; };
+		1FA33B980BC31C0488FF5864 /* OnceFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnceFlag.swift; sourceTree = "<group>"; };
+		214F914D7EC5667681C6139B /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		220D9154E0266506502C2D1C /* EntitlementResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitlementResolverTests.swift; sourceTree = "<group>"; };
+		24BBA84E45C1D74AC5A43302 /* TVAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppsView.swift; sourceTree = "<group>"; };
+		276464C7E9152E0A6C1DF1F6 /* ReceiverPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverPage.swift; sourceTree = "<group>"; };
+		27DB8BED70AF4DF7FB8D98E3 /* LANHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LANHTTPClient.swift; sourceTree = "<group>"; };
+		2950527371B4716DF38B9367 /* AndroidTVAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidTVAdapter.swift; sourceTree = "<group>"; };
+		29BE9B38E7F314A71006F63F /* TextInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputController.swift; sourceTree = "<group>"; };
+		2AF6D2A358563F6402FCE7C3 /* DiagnosticAllowance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticAllowance.swift; sourceTree = "<group>"; };
+		2CCA0C5A6A75E3F47DC104D2 /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
+		306F1C90DCD4E2FB2E77BAF0 /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
+		318D3258642250EBD91B63CE /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
+		31A482F4D00D30ACA35E3163 /* ServerAndRemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAndRemoteTests.swift; sourceTree = "<group>"; };
+		331FFBE9B5383971436F86A5 /* FrameEncoderSizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameEncoderSizing.swift; sourceTree = "<group>"; };
+		3629DC5B888D8B38F5206100 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		385D79ED6D511EAFDE90A208 /* ScreenshotTourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTourUITests.swift; sourceTree = "<group>"; };
+		406BD8B98BAF7CBD37653547 /* FrameStreamServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameStreamServer.swift; sourceTree = "<group>"; };
+		41295BD375E617037B1E22C9 /* SupportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportService.swift; sourceTree = "<group>"; };
+		4340D1AF48A271EDFF2912EA /* TVRemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVRemoteApp.swift; sourceTree = "<group>"; };
+		46EFA3120E2066DAC85BBE63 /* SettingsComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsComponents.swift; sourceTree = "<group>"; };
+		49613B5E6E0D9A475D2B57B4 /* TVStatusCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVStatusCard.swift; sourceTree = "<group>"; };
+		4B6B85853A3ECE01985E4A4C /* CompatibilityChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityChecker.swift; sourceTree = "<group>"; };
+		4DEAB7CB55668BB5DF410488 /* LGAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGAdapter.swift; sourceTree = "<group>"; };
+		4ED8C8904A13AD1F0B660456 /* OnboardingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUITests.swift; sourceTree = "<group>"; };
+		4EE3BF1379B5713912CD0D94 /* RemoteCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCommand.swift; sourceTree = "<group>"; };
+		4EEFBD1C72A2DBBE4E196C05 /* BonusFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusFlowView.swift; sourceTree = "<group>"; };
+		5042CE738A49E4FC3FDAA569 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		546A440A46C7C396402FF6C2 /* TVRemoteScreenMirroring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVRemoteScreenMirroring.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		582C4CE0A49756F9F5E61C92 /* Protobuf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protobuf.swift; sourceTree = "<group>"; };
+		5A6CFE351A6E93311AD279DA /* TVAppCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppCatalog.swift; sourceTree = "<group>"; };
+		5ABE25198385BD6335188997 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		5D43B0998F426D2DE1ADC485 /* BonjourBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourBrowser.swift; sourceTree = "<group>"; };
+		5D85D7CB45315F8F08A009BE /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		5E27543066BD68B17D2A1091 /* DemoTVSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTVSession.swift; sourceTree = "<group>"; };
+		5E6222C67076EEB73E6A9003 /* RemotePro.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = RemotePro.storekit; sourceTree = "<group>"; };
+		63F6525E24D2D15FBDAE7D7E /* SSDPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSDPClient.swift; sourceTree = "<group>"; };
+		67EE2D0068D1C34EF26FB164 /* PurchaseSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSuccessView.swift; sourceTree = "<group>"; };
+		6B365D3A8BFAB1AFFEC2A523 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		6BDE5E4A97786A6370F716F5 /* ErrorViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViews.swift; sourceTree = "<group>"; };
+		6CC39B242E22C919D793AD23 /* TVRemoteScreenMirroringTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TVRemoteScreenMirroringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CFD17E687339AA496127F29 /* SamsungAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamsungAdapter.swift; sourceTree = "<group>"; };
+		7695EB9FEB12FBC63C8FEB7A /* MediaRendererController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRendererController.swift; sourceTree = "<group>"; };
+		7B6792F498DF508122A9308D /* CertificatePinning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatePinning.swift; sourceTree = "<group>"; };
+		7B85207935408884448B669E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		7E93CF3416F07B755A719F4B /* MirroringController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirroringController.swift; sourceTree = "<group>"; };
+		7EFD9FBC9BB0278147923306 /* StoreKitIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitIntegrationTests.swift; sourceTree = "<group>"; };
+		7FFD57306865F498852ECB2D /* PaywallPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallPresenter.swift; sourceTree = "<group>"; };
+		80F39CE0A9E584CAEF169F4C /* MediaPreparation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPreparation.swift; sourceTree = "<group>"; };
+		834E17CB1CC36C38FAB63440 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		880DD3F43DD9BE0CDA935E0F /* UPnPDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPnPDevice.swift; sourceTree = "<group>"; };
+		8849B9A80C51FFC75655C563 /* BroadcastUpload.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BroadcastUpload.entitlements; sourceTree = "<group>"; };
+		8F2008CD307074C50018F533 /* MySubscriptionsInApp.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = MySubscriptionsInApp.storekit; sourceTree = "<group>"; };
+		91011CB7877E8325C3FC5C56 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		918A5DA60AB9C8D7B028E7F5 /* FrameEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameEncoder.swift; sourceTree = "<group>"; };
+		919CF0584D1AFFA313F016DB /* TVProber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVProber.swift; sourceTree = "<group>"; };
+		91C2ACB11ACF354976FF81F7 /* KeyHoldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyHoldController.swift; sourceTree = "<group>"; };
+		944D62DAD81664706B89A6BE /* CommandPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPipeline.swift; sourceTree = "<group>"; };
+		94BB190D2253320CEAEC6299 /* TVCapabilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCapabilities.swift; sourceTree = "<group>"; };
+		985584681A01CDD007C6FDAF /* WakeOnLAN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeOnLAN.swift; sourceTree = "<group>"; };
+		99D1F5578C2929D671DCB3E3 /* DiagnosticsLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsLog.swift; sourceTree = "<group>"; };
+		9E000C6EF59A675682C52867 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A01720DE7EA5515993C052EF /* TVAppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppsController.swift; sourceTree = "<group>"; };
+		A150F3F1482BBD48D50FDB38 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		A3AC33BD5177109DE1B9C73B /* NotificationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsView.swift; sourceTree = "<group>"; };
+		A6DA7DA603B2F19B0225AE51 /* HelpArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpArticle.swift; sourceTree = "<group>"; };
+		A8C515F9E615EB1EDDE11DE6 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		AD39F09AF41DD7BEDFB4D711 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		AED2EE305E31B180678DC920 /* ContactSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSupportView.swift; sourceTree = "<group>"; };
+		AF22D108CB9923D86E93E059 /* AppConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = AppConfig.plist; sourceTree = "<group>"; };
+		AF587B81DA22D6FE768A0694 /* MediaCastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCastController.swift; sourceTree = "<group>"; };
+		B4CB97DC23C790E5F5DFCAA6 /* HelpCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterView.swift; sourceTree = "<group>"; };
+		B7676DC80C6896F0D97EEE5A /* PolicyAndLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyAndLocalizationTests.swift; sourceTree = "<group>"; };
+		B7835194FA1F924F004BB352 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B83545CC0665775DC0A4FBF0 /* DeviceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStore.swift; sourceTree = "<group>"; };
+		B87C791062B5BB526F8ABD1A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BCBB4098F9DC39013E7D516C /* RemoteProView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProView.swift; sourceTree = "<group>"; };
+		BD2BC4C1E17A99B79CD6E4A5 /* TVIconStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVIconStore.swift; sourceTree = "<group>"; };
+		BE616DE9DFD778FD8F4C6006 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		BFED7110C15223670E9E288E /* TVRemoteScreenMirroringUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TVRemoteScreenMirroringUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04CAE505D400E75E135C2E9 /* EntitlementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitlementModel.swift; sourceTree = "<group>"; };
+		C23F05CF4FF149253F37BD1F /* TLSStreamConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLSStreamConnection.swift; sourceTree = "<group>"; };
+		C2D187148CA699EDC1A9AD34 /* CastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastScreen.swift; sourceTree = "<group>"; };
+		C3A73CB5DB1B4E750A9BBC15 /* StoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
+		C6CA3FE811F9C702AE6222A0 /* TVRemoteScreenMirroring.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TVRemoteScreenMirroring.entitlements; sourceTree = "<group>"; };
+		CA46AA63D5A8C7B12715E2A1 /* RedesignTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedesignTests.swift; sourceTree = "<group>"; };
+		D18C103AC4D3E26A58634F6E /* LocalHTTPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHTTPServer.swift; sourceTree = "<group>"; };
+		D23567E41411F89A2F4D2E1A /* RemoteKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteKeys.swift; sourceTree = "<group>"; };
+		D24003E0F1A0C479D8381C52 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
+		D248543F9984949E9ED30F8C /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		D448E9B7B820F77A1C259372 /* BonusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusController.swift; sourceTree = "<group>"; };
+		D8D1B86590D27012D88C4AC5 /* Illustrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Illustrations.swift; sourceTree = "<group>"; };
+		D9ABA0550554D187145EA210 /* MirroringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirroringView.swift; sourceTree = "<group>"; };
+		DB301540BC351EC0D55F88EC /* PairingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingViews.swift; sourceTree = "<group>"; };
+		DB5E4410A79546177988B5C5 /* FirebaseBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseBootstrap.swift; sourceTree = "<group>"; };
+		DCD7A8302496CCB9CB3EF603 /* TVAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAdapter.swift; sourceTree = "<group>"; };
+		DD163804A6DF01889291919C /* BonusCampaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusCampaign.swift; sourceTree = "<group>"; };
+		E21BDC4E5756EC351B926018 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		E3C73CC7111773673AD67B02 /* AndroidTVPairing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidTVPairing.swift; sourceTree = "<group>"; };
+		E45D76A4C686F8E7AFFD0D3F /* AppTiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTiles.swift; sourceTree = "<group>"; };
+		EB40AA7036EE4F158F3AA0C7 /* JSONFileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileStore.swift; sourceTree = "<group>"; };
+		EECCE998611F31E34A97597E /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		F02C0EC38B23A79A98A976B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F43CC069D172B239B9BA4546 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		F524C884688A060B65376423 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
+		F56CBB26E9AD1FB0A1251365 /* TVDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVDevice.swift; sourceTree = "<group>"; };
+		FC14D32891C972CDDB56F7A4 /* DiscoveryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryService.swift; sourceTree = "<group>"; };
+		FCFEE67716DC0A0CD6C5E836 /* EntitlementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitlementService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1FF491D3CA9F1AD48DAB580 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F2D664CD83D20A660B1612C /* FirebaseCore in Frameworks */,
+				A567A7FF480E95789FEC8D6C /* FirebaseAnalyticsCore in Frameworks */,
+				720121CC1DA512A9CDA107E7 /* FirebaseMessaging in Frameworks */,
+				244BC74B4C3B0912B00D14BE /* FirebaseCrashlytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB8EB4EC661C3BE588B80E2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1C38A8173B9F94BD69DBCA /* ReplayKit.framework in Frameworks */,
+				CB3C58D12007D9E966C0C0D3 /* VideoToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		053E707FAE4DB6D2CFC058FF /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				306F1C90DCD4E2FB2E77BAF0 /* AnalyticsEvent.swift */,
+				14B310B775EDDE9A1D93EBC8 /* AnalyticsService.swift */,
+				DB5E4410A79546177988B5C5 /* FirebaseBootstrap.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		05CC8C0C4AFF29A55B3B9DB0 /* Cast */ = {
+			isa = PBXGroup;
+			children = (
+				C2D187148CA699EDC1A9AD34 /* CastScreen.swift */,
+				D9ABA0550554D187145EA210 /* MirroringView.swift */,
+			);
+			path = Cast;
+			sourceTree = "<group>";
+		};
+		0777C62181373909494BAFEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8C515F9E615EB1EDDE11DE6 /* AppError.swift */,
+				4EE3BF1379B5713912CD0D94 /* RemoteCommand.swift */,
+				94BB190D2253320CEAEC6299 /* TVCapabilities.swift */,
+				F56CBB26E9AD1FB0A1251365 /* TVDevice.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07EA796D5DE4F4D122C351E0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A3AC33BD5177109DE1B9C73B /* NotificationSettingsView.swift */,
+				46EFA3120E2066DAC85BBE63 /* SettingsComponents.swift */,
+				214F914D7EC5667681C6139B /* SettingsScreen.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0AB215EDEB42EDDAC8ADA77F /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				F524C884688A060B65376423 /* DiscoveryView.swift */,
+				DB301540BC351EC0D55F88EC /* PairingViews.swift */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		0E4990A9CB7E74361B074A7A /* TVApps */ = {
+			isa = PBXGroup;
+			children = (
+				E45D76A4C686F8E7AFFD0D3F /* AppTiles.swift */,
+				24BBA84E45C1D74AC5A43302 /* TVAppsView.swift */,
+			);
+			path = TVApps;
+			sourceTree = "<group>";
+		};
+		163256B8CAC654CB302C9DB0 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				0D1B5B4005E4D1FEBF4F35EF /* PaywallView.swift */,
+				67EE2D0068D1C34EF26FB164 /* PurchaseSuccessView.swift */,
+				BCBB4098F9DC39013E7D516C /* RemoteProView.swift */,
+				8F2008CD307074C50018F533 /* MySubscriptionsInApp.storekit */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		18F2A60757781AE1118342E8 /* Diagnostics */ = {
+			isa = PBXGroup;
+			children = (
+				99D1F5578C2929D671DCB3E3 /* DiagnosticsLog.swift */,
+			);
+			path = Diagnostics;
+			sourceTree = "<group>";
+		};
+		1ACAFE4E04B6201E6137A18C /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				AED2EE305E31B180678DC920 /* ContactSupportView.swift */,
+				A6DA7DA603B2F19B0225AE51 /* HelpArticle.swift */,
+				B4CB97DC23C790E5F5DFCAA6 /* HelpCenterView.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		21239176F0D70CCB522BA0E5 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0C87AFA2CF499AC5D18DCB21 /* DarwinObserver.swift */,
+				331FFBE9B5383971436F86A5 /* FrameEncoderSizing.swift */,
+				D18C103AC4D3E26A58634F6E /* LocalHTTPServer.swift */,
+				0CC047FA1FC4FAFA5D841292 /* LocalNetworkInfo.swift */,
+				1A76DEEF59CC438469C55789 /* MirroringShared.swift */,
+				1FA33B980BC31C0488FF5864 /* OnceFlag.swift */,
+				276464C7E9152E0A6C1DF1F6 /* ReceiverPage.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		25AA93F68E437E89F07744A8 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				F43CC069D172B239B9BA4546 /* Components.swift */,
+				6BDE5E4A97786A6370F716F5 /* ErrorViews.swift */,
+				D8D1B86590D27012D88C4AC5 /* Illustrations.swift */,
+				6B365D3A8BFAB1AFFEC2A523 /* Theme.swift */,
+				91011CB7877E8325C3FC5C56 /* Typography.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		26099B873A5FDF29EF0AC2C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				834E17CB1CC36C38FAB63440 /* ReplayKit.framework */,
+				BE616DE9DFD778FD8F4C6006 /* VideoToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		31394A369236AF996C8129FC /* AppLaunching */ = {
+			isa = PBXGroup;
+			children = (
+				5A6CFE351A6E93311AD279DA /* TVAppCatalog.swift */,
+				A01720DE7EA5515993C052EF /* TVAppsController.swift */,
+				BD2BC4C1E17A99B79CD6E4A5 /* TVIconStore.swift */,
+			);
+			path = AppLaunching;
+			sourceTree = "<group>";
+		};
+		31F52CB57E71BE5ADE28F1AD /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				A150F3F1482BBD48D50FDB38 /* NotificationService.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		339C49C86BBCD75CF4EE8250 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				220D9154E0266506502C2D1C /* EntitlementResolverTests.swift */,
+				B7676DC80C6896F0D97EEE5A /* PolicyAndLocalizationTests.swift */,
+				CA46AA63D5A8C7B12715E2A1 /* RedesignTests.swift */,
+				31A482F4D00D30ACA35E3163 /* ServerAndRemoteTests.swift */,
+				7EFD9FBC9BB0278147923306 /* StoreKitIntegrationTests.swift */,
+				021FC4BBEB59675F71FB8339 /* TextAndCodecTests.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		3A9AECF123216F1989BE2AC2 /* RemoteControl */ = {
+			isa = PBXGroup;
+			children = (
+				944D62DAD81664706B89A6BE /* CommandPipeline.swift */,
+				4B6B85853A3ECE01985E4A4C /* CompatibilityChecker.swift */,
+				5ABE25198385BD6335188997 /* ConnectionManager.swift */,
+				985584681A01CDD007C6FDAF /* WakeOnLAN.swift */,
+			);
+			path = RemoteControl;
+			sourceTree = "<group>";
+		};
+		3AC6FD84EC58C5354530729F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7B6792F498DF508122A9308D /* CertificatePinning.swift */,
+				27DB8BED70AF4DF7FB8D98E3 /* LANHTTPClient.swift */,
+				C23F05CF4FF149253F37BD1F /* TLSStreamConnection.swift */,
+				318D3258642250EBD91B63CE /* WebSocketClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		402962DB00A88CF039F2DED7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4ED8C8904A13AD1F0B660456 /* OnboardingUITests.swift */,
+				385D79ED6D511EAFDE90A208 /* ScreenshotTourUITests.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		40995F4415110FC34C88982E /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				91C2ACB11ACF354976FF81F7 /* KeyHoldController.swift */,
+				D23567E41411F89A2F4D2E1A /* RemoteKeys.swift */,
+				166746154BE82FF2F5B5435D /* RemoteScreen.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		4743B4E242183ED95A1D195B /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				14273011AE75BD24F0ECF5EC /* AppSettings.swift */,
+				B83545CC0665775DC0A4FBF0 /* DeviceStore.swift */,
+				EB40AA7036EE4F158F3AA0C7 /* JSONFileStore.swift */,
+				E21BDC4E5756EC351B926018 /* KeychainStore.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		4A9D6229B0C838FF5E66887C /* Samsung */ = {
+			isa = PBXGroup;
+			children = (
+				6CFD17E687339AA496127F29 /* SamsungAdapter.swift */,
+			);
+			path = Samsung;
+			sourceTree = "<group>";
+		};
+		4CEC9CC16B9EBEBA3387AC10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0DFA1EDF273ECEE9FDED2A36 /* BroadcastUpload.appex */,
+				546A440A46C7C396402FF6C2 /* TVRemoteScreenMirroring.app */,
+				6CC39B242E22C919D793AD23 /* TVRemoteScreenMirroringTests.xctest */,
+				BFED7110C15223670E9E288E /* TVRemoteScreenMirroringUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D5D9B7F4D4180397F2D0E67 /* BroadcastUpload */ = {
+			isa = PBXGroup;
+			children = (
+				8849B9A80C51FFC75655C563 /* BroadcastUpload.entitlements */,
+				918A5DA60AB9C8D7B028E7F5 /* FrameEncoder.swift */,
+				406BD8B98BAF7CBD37653547 /* FrameStreamServer.swift */,
+				5D85D7CB45315F8F08A009BE /* PrivacyInfo.xcprivacy */,
+				D24003E0F1A0C479D8381C52 /* SampleHandler.swift */,
+			);
+			path = BroadcastUpload;
+			sourceTree = "<group>";
+		};
+		68540C81F4E55EBDC8C3D3A6 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				402962DB00A88CF039F2DED7 /* UI */,
+				339C49C86BBCD75CF4EE8250 /* Unit */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		6A2D4FA0CDF0E66D09C7D954 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				5E27543066BD68B17D2A1091 /* DemoTVSession.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		6AFD9C1ECD26386F08460B33 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D248543F9984949E9ED30F8C /* KeyboardView.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		6C1F091CCD35C9D495C009A0 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				5D43B0998F426D2DE1ADC485 /* BonjourBrowser.swift */,
+				FC14D32891C972CDDB56F7A4 /* DiscoveryService.swift */,
+				919CF0584D1AFFA313F016DB /* TVProber.swift */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		719301FAC2E232A5E10C3689 /* MediaCasting */ = {
+			isa = PBXGroup;
+			children = (
+				AF587B81DA22D6FE768A0694 /* MediaCastController.swift */,
+				80F39CE0A9E584CAEF169F4C /* MediaPreparation.swift */,
+			);
+			path = MediaCasting;
+			sourceTree = "<group>";
+		};
+		726118567EE097268147F260 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				AD39F09AF41DD7BEDFB4D711 /* Localization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		734AB50D654FE65DBD1E03D6 = {
+			isa = PBXGroup;
+			children = (
+				4D5D9B7F4D4180397F2D0E67 /* BroadcastUpload */,
+				21239176F0D70CCB522BA0E5 /* Shared */,
+				68540C81F4E55EBDC8C3D3A6 /* Tests */,
+				CBBF9B78F09EA0B493E49174 /* TVRemoteScreenMirroring */,
+				26099B873A5FDF29EF0AC2C6 /* Frameworks */,
+				4CEC9CC16B9EBEBA3387AC10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		835DA35FA613B88341C8682C /* ScreenMirroring */ = {
+			isa = PBXGroup;
+			children = (
+				7E93CF3416F07B755A719F4B /* MirroringController.swift */,
+			);
+			path = ScreenMirroring;
+			sourceTree = "<group>";
+		};
+		868D9FAEED53F4D90B2B30D9 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				49613B5E6E0D9A475D2B57B4 /* TVStatusCard.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8FBC8313C4BE00AABAF6E294 /* StoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				5E6222C67076EEB73E6A9003 /* RemotePro.storekit */,
+			);
+			path = StoreKit;
+			sourceTree = "<group>";
+		};
+		945EEA02673796416EB227E0 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				17E9F7DDEF42F95AE6240D13 /* DesignStatesGallery.swift */,
+				B7835194FA1F924F004BB352 /* RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		954DBF6F578E8D354063CD63 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				3629DC5B888D8B38F5206100 /* InfoPlist.xcstrings */,
+				7B85207935408884448B669E /* Localizable.xcstrings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		9903A7D79754B2BA8DEA7F83 /* TextInput */ = {
+			isa = PBXGroup;
+			children = (
+				29BE9B38E7F314A71006F63F /* TextInputController.swift */,
+			);
+			path = TextInput;
+			sourceTree = "<group>";
+		};
+		9B780681E4C5DB5151CA0A95 /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				DD163804A6DF01889291919C /* BonusCampaign.swift */,
+				D448E9B7B820F77A1C259372 /* BonusController.swift */,
+				03F46297EC89B0C5070F7746 /* OfferCodeService.swift */,
+			);
+			path = Offers;
+			sourceTree = "<group>";
+		};
+		A11627BCE16D9CBD31477188 /* Pairing */ = {
+			isa = PBXGroup;
+			children = (
+				0E0446F397D9B904E5B53D58 /* PairingCoordinator.swift */,
+			);
+			path = Pairing;
+			sourceTree = "<group>";
+		};
+		B7278D21ADCFC6249DE095A5 /* Purchases */ = {
+			isa = PBXGroup;
+			children = (
+				2AF6D2A358563F6402FCE7C3 /* DiagnosticAllowance.swift */,
+				C04CAE505D400E75E135C2E9 /* EntitlementModel.swift */,
+				FCFEE67716DC0A0CD6C5E836 /* EntitlementService.swift */,
+				7FFD57306865F498852ECB2D /* PaywallPresenter.swift */,
+				C3A73CB5DB1B4E750A9BBC15 /* StoreService.swift */,
+			);
+			path = Purchases;
+			sourceTree = "<group>";
+		};
+		BAC99E6928368036339B8A58 /* AndroidTV */ = {
+			isa = PBXGroup;
+			children = (
+				2950527371B4716DF38B9367 /* AndroidTVAdapter.swift */,
+				E3C73CC7111773673AD67B02 /* AndroidTVPairing.swift */,
+				042AAFE301E1C9F48468A4C8 /* ClientIdentityStore.swift */,
+				582C4CE0A49756F9F5E61C92 /* Protobuf.swift */,
+			);
+			path = AndroidTV;
+			sourceTree = "<group>";
+		};
+		BAEB1F6E5695066BA9E95DED /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				053E707FAE4DB6D2CFC058FF /* Analytics */,
+				31394A369236AF996C8129FC /* AppLaunching */,
+				6C1F091CCD35C9D495C009A0 /* Discovery */,
+				719301FAC2E232A5E10C3689 /* MediaCasting */,
+				31F52CB57E71BE5ADE28F1AD /* Notifications */,
+				9B780681E4C5DB5151CA0A95 /* Offers */,
+				A11627BCE16D9CBD31477188 /* Pairing */,
+				B7278D21ADCFC6249DE095A5 /* Purchases */,
+				3A9AECF123216F1989BE2AC2 /* RemoteControl */,
+				835DA35FA613B88341C8682C /* ScreenMirroring */,
+				F0390CF8E063CCB131FF26CB /* Support */,
+				9903A7D79754B2BA8DEA7F83 /* TextInput */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BB5A2036233BE5C135153F64 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5042CE738A49E4FC3FDAA569 /* AppModel.swift */,
+				4340D1AF48A271EDFF2912EA /* TVRemoteApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BF88070DBA00AB581EF0AC77 /* LG */ = {
+			isa = PBXGroup;
+			children = (
+				4DEAB7CB55668BB5DF410488 /* LGAdapter.swift */,
+			);
+			path = LG;
+			sourceTree = "<group>";
+		};
+		CBBF9B78F09EA0B493E49174 /* TVRemoteScreenMirroring */ = {
+			isa = PBXGroup;
+			children = (
+				BB5A2036233BE5C135153F64 /* App */,
+				D168DA19BFF2A37F9579D9C9 /* Core */,
+				FCFEE00ACD690D3AC453BB8D /* Features */,
+				E8EFEDC1284C75BC065933D2 /* Resources */,
+				BAEB1F6E5695066BA9E95DED /* Services */,
+				FFFD86DD71322FCCD052C03E /* Supporting */,
+				E57B27CCC243ADFBFF71D92F /* TVAdapters */,
+				B87C791062B5BB526F8ABD1A /* GoogleService-Info.plist */,
+			);
+			path = TVRemoteScreenMirroring;
+			sourceTree = "<group>";
+		};
+		D10F7F5D2581FACD23200A63 /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				4EEFBD1C72A2DBBE4E196C05 /* BonusFlowView.swift */,
+			);
+			path = Offers;
+			sourceTree = "<group>";
+		};
+		D168DA19BFF2A37F9579D9C9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FCC83DFA1907C8C101318265 /* Configuration */,
+				25AA93F68E437E89F07744A8 /* DesignSystem */,
+				18F2A60757781AE1118342E8 /* Diagnostics */,
+				726118567EE097268147F260 /* Localization */,
+				0777C62181373909494BAFEA /* Models */,
+				3AC6FD84EC58C5354530729F /* Networking */,
+				4743B4E242183ED95A1D195B /* Persistence */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D50F49877F318A0F87E909D4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2CCA0C5A6A75E3F47DC104D2 /* OnboardingFlow.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E57B27CCC243ADFBFF71D92F /* TVAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				BAC99E6928368036339B8A58 /* AndroidTV */,
+				6A2D4FA0CDF0E66D09C7D954 /* Demo */,
+				BF88070DBA00AB581EF0AC77 /* LG */,
+				4A9D6229B0C838FF5E66887C /* Samsung */,
+				EFC27912B741F39E142B9D07 /* UPnP */,
+				DCD7A8302496CCB9CB3EF603 /* TVAdapter.swift */,
+			);
+			path = TVAdapters;
+			sourceTree = "<group>";
+		};
+		E8EFEDC1284C75BC065933D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				954DBF6F578E8D354063CD63 /* Localization */,
+				8FBC8313C4BE00AABAF6E294 /* StoreKit */,
+				AF22D108CB9923D86E93E059 /* AppConfig.plist */,
+				F02C0EC38B23A79A98A976B2 /* Assets.xcassets */,
+				9E000C6EF59A675682C52867 /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EFC27912B741F39E142B9D07 /* UPnP */ = {
+			isa = PBXGroup;
+			children = (
+				7695EB9FEB12FBC63C8FEB7A /* MediaRendererController.swift */,
+				63F6525E24D2D15FBDAE7D7E /* SSDPClient.swift */,
+				880DD3F43DD9BE0CDA935E0F /* UPnPDevice.swift */,
+			);
+			path = UPnP;
+			sourceTree = "<group>";
+		};
+		F0390CF8E063CCB131FF26CB /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				41295BD375E617037B1E22C9 /* SupportService.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		FCC83DFA1907C8C101318265 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EECCE998611F31E34A97597E /* AppConfiguration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		FCFEE00ACD690D3AC453BB8D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				05CC8C0C4AFF29A55B3B9DB0 /* Cast */,
+				0AB215EDEB42EDDAC8ADA77F /* Devices */,
+				6AFD9C1ECD26386F08460B33 /* Keyboard */,
+				D10F7F5D2581FACD23200A63 /* Offers */,
+				D50F49877F318A0F87E909D4 /* Onboarding */,
+				163256B8CAC654CB302C9DB0 /* Paywall */,
+				40995F4415110FC34C88982E /* Remote */,
+				945EEA02673796416EB227E0 /* Root */,
+				07EA796D5DE4F4D122C351E0 /* Settings */,
+				868D9FAEED53F4D90B2B30D9 /* Shared */,
+				1ACAFE4E04B6201E6137A18C /* Support */,
+				0E4990A9CB7E74361B074A7A /* TVApps */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FFFD86DD71322FCCD052C03E /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				C6CA3FE811F9C702AE6222A0 /* TVRemoteScreenMirroring.entitlements */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C5933C01F9EC66C43C4DBF4 /* TVRemoteScreenMirroringTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EDC8C79660C23C5EFF245A4 /* Build configuration list for PBXNativeTarget "TVRemoteScreenMirroringTests" */;
+			buildPhases = (
+				5D149202213C7483AFBAC0E8 /* Sources */,
+				5204D6065B32E83161FB81AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A54ACFF66FC1E3BE7FBF6E10 /* PBXTargetDependency */,
+			);
+			name = TVRemoteScreenMirroringTests;
+			packageProductDependencies = (
+			);
+			productName = TVRemoteScreenMirroringTests;
+			productReference = 6CC39B242E22C919D793AD23 /* TVRemoteScreenMirroringTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		88F50DC82233850349F1AC2B /* BroadcastUpload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0804027E5C1217DFFA9474B2 /* Build configuration list for PBXNativeTarget "BroadcastUpload" */;
+			buildPhases = (
+				4620E07CDF950DA53107DB37 /* Sources */,
+				8D1F912ECA997E8DB37F47F0 /* Resources */,
+				FB8EB4EC661C3BE588B80E2C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BroadcastUpload;
+			packageProductDependencies = (
+			);
+			productName = BroadcastUpload;
+			productReference = 0DFA1EDF273ECEE9FDED2A36 /* BroadcastUpload.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		978A45FFD1334C0085083067 /* TVRemoteScreenMirroring */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DA364F37C05075ED0A6B856 /* Build configuration list for PBXNativeTarget "TVRemoteScreenMirroring" */;
+			buildPhases = (
+				232BC1269993DF4F58930ECC /* Warn about missing owner configuration (Release only) */,
+				DCF959400ED4724F7C5AEB81 /* Sources */,
+				F7152E3119895FC890CE9BED /* Resources */,
+				F1FF491D3CA9F1AD48DAB580 /* Frameworks */,
+				ECBFFCD9AAF72CC84BD5434D /* Embed Foundation Extensions */,
+				FE8E1638DFF0CBEEAEF64F4F /* Upload Crashlytics dSYMs (release builds with Firebase config only) */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41DA2E30EABA4F3C4D18064C /* PBXTargetDependency */,
+			);
+			name = TVRemoteScreenMirroring;
+			packageProductDependencies = (
+				4BF6DE4C115B7E6320E87387 /* FirebaseCore */,
+				BF2BA8511B1CDB4D4340255B /* FirebaseAnalyticsCore */,
+				1422B3A9CC1C43FA3DB93981 /* FirebaseMessaging */,
+				65896A480453A97FD7DE4F46 /* FirebaseCrashlytics */,
+			);
+			productName = TVRemoteScreenMirroring;
+			productReference = 546A440A46C7C396402FF6C2 /* TVRemoteScreenMirroring.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFF425F987662F1E7C133425 /* TVRemoteScreenMirroringUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E51C78E8EC59FB955445A0FF /* Build configuration list for PBXNativeTarget "TVRemoteScreenMirroringUITests" */;
+			buildPhases = (
+				235DCF074BBBED94687A6997 /* Sources */,
+				A7C98700CCA6316222D32384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2318FEC548B421E95455E054 /* PBXTargetDependency */,
+			);
+			name = TVRemoteScreenMirroringUITests;
+			packageProductDependencies = (
+			);
+			productName = TVRemoteScreenMirroringUITests;
+			productReference = BFED7110C15223670E9E288E /* TVRemoteScreenMirroringUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E69049E21E2B55D0116B993E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					6C5933C01F9EC66C43C4DBF4 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					88F50DC82233850349F1AC2B = {
+						ProvisioningStyle = Automatic;
+					};
+					978A45FFD1334C0085083067 = {
+						ProvisioningStyle = Automatic;
+					};
+					BFF425F987662F1E7C133425 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 978A45FFD1334C0085083067;
+					};
+				};
+			};
+			buildConfigurationList = 68C0D9339A8CE0B8A6DBAE66 /* Build configuration list for PBXProject "TVRemoteScreenMirroring" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				de,
+				en,
+				es,
+				fr,
+				ru,
+			);
+			mainGroup = 734AB50D654FE65DBD1E03D6;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CE0CA6D6B0FBBF07DAB1A7D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4CEC9CC16B9EBEBA3387AC10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				978A45FFD1334C0085083067 /* TVRemoteScreenMirroring */,
+				88F50DC82233850349F1AC2B /* BroadcastUpload */,
+				6C5933C01F9EC66C43C4DBF4 /* TVRemoteScreenMirroringTests */,
+				BFF425F987662F1E7C133425 /* TVRemoteScreenMirroringUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5204D6065B32E83161FB81AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FA1933D727335DCB00EC09A /* RemotePro.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1F912ECA997E8DB37F47F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DEF4E9CEDBEEAA655B98B3B /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7C98700CCA6316222D32384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3CDE62E6558228069A5743 /* RemotePro.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7152E3119895FC890CE9BED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9012229E03757992F85DCE67 /* AppConfig.plist in Resources */,
+				E310E859CF3B07DFD6151D78 /* Assets.xcassets in Resources */,
+				20237C4B1F5FFD41CB1F6A81 /* GoogleService-Info.plist in Resources */,
+				997ED55C99AE9AD9ED38F8BD /* InfoPlist.xcstrings in Resources */,
+				8F2008CE307074C50018F533 /* MySubscriptionsInApp.storekit in Resources */,
+				9A0F9F72C92EE5FEA0C7700D /* Localizable.xcstrings in Resources */,
+				212DB54558C86D5A8A94F8FE /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		232BC1269993DF4F58930ECC /* Warn about missing owner configuration (Release only) */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Warn about missing owner configuration (Release only)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# App Review needs a privacy policy link and a working support contact. Empty values\n# are allowed while developing; Release builds show a warning for each one.\nif [ \"${CONFIGURATION}\" != \"Release\" ]; then exit 0; fi\nCONFIG=\"${SRCROOT}/TVRemoteScreenMirroring/Resources/AppConfig.plist\"\nfor KEY in PrivacyPolicyURL SupportEmail AppStoreID; do\n  VALUE=$(/usr/libexec/PlistBuddy -c \"Print :${KEY}\" \"${CONFIG}\" 2>/dev/null)\n  if [ -z \"${VALUE}\" ]; then echo \"warning: AppConfig.plist: ${KEY} is empty (see Documentation/RELEASE_CHECKLIST.md)\"; fi\ndone\n";
+		};
+		FE8E1638DFF0CBEEAEF64F4F /* Upload Crashlytics dSYMs (release builds with Firebase config only) */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			name = "Upload Crashlytics dSYMs (release builds with Firebase config only)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Runs only for Release builds that actually contain a real GoogleService-Info.plist.\nif [ \"${CONFIGURATION}\" != \"Release\" ]; then exit 0; fi\nif [ ! -f \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleService-Info.plist\" ]; then\n  echo \"note: GoogleService-Info.plist not bundled; skipping Crashlytics dSYM upload.\"\n  exit 0\nfi\nRUN_SCRIPT=\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\nif [ -x \"${RUN_SCRIPT}\" ]; then \"${RUN_SCRIPT}\"; else echo \"warning: Crashlytics run script not found at ${RUN_SCRIPT}\"; fi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		235DCF074BBBED94687A6997 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C36675AB424659F65E481903 /* OnboardingUITests.swift in Sources */,
+				A54C2A5D4260F1BF21490BAF /* ScreenshotTourUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4620E07CDF950DA53107DB37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EFC33C3BE531A020EBB6181 /* DarwinObserver.swift in Sources */,
+				C2B720BE41EE46BABDDA70C8 /* FrameEncoder.swift in Sources */,
+				80B5894D18A7E44FB9C74EB3 /* FrameEncoderSizing.swift in Sources */,
+				AD3FDC1FBB67361594F383AE /* FrameStreamServer.swift in Sources */,
+				52638313848404FFE0CBCB24 /* LocalHTTPServer.swift in Sources */,
+				C1EF0EFE36DEB2E154D0DBD0 /* LocalNetworkInfo.swift in Sources */,
+				D3D612894C623504912D69E9 /* MirroringShared.swift in Sources */,
+				7535D7B08EA23AF0F989D1E0 /* OnceFlag.swift in Sources */,
+				3E161C1EE22E550E7D87B8C4 /* ReceiverPage.swift in Sources */,
+				D878D8F187EBF4582C2BB4C5 /* SampleHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D149202213C7483AFBAC0E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DECC2EC0972F7ACF8173A0D /* EntitlementResolverTests.swift in Sources */,
+				F6B306C5124878574A041234 /* PolicyAndLocalizationTests.swift in Sources */,
+				3C7D122997A360F8A1A6DF6D /* RedesignTests.swift in Sources */,
+				BDEB7513DD7CBCDCBFEA3BEE /* ServerAndRemoteTests.swift in Sources */,
+				D6922C37AD5BCAF39BF57D9A /* StoreKitIntegrationTests.swift in Sources */,
+				58DCE9E0D9F7006B8134CD5E /* TextAndCodecTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF959400ED4724F7C5AEB81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73A1D669487CE50FEE94C4A3 /* AnalyticsEvent.swift in Sources */,
+				0CB55E23F17E6B0109E1CE61 /* AnalyticsService.swift in Sources */,
+				05DBB75B4E7621D9F7D83EF1 /* AndroidTVAdapter.swift in Sources */,
+				99EE87783905A22152E2ECD9 /* AndroidTVPairing.swift in Sources */,
+				5E28C8EAD34200FE7D315C0C /* AppConfiguration.swift in Sources */,
+				D05F0621AB5C19CFFBE87A38 /* AppError.swift in Sources */,
+				975E2F1C8FF3F7CCA7420D9F /* AppModel.swift in Sources */,
+				D6117D62084C726DFA428D4F /* AppSettings.swift in Sources */,
+				A6F44CF96E10FDF58166FD43 /* AppTiles.swift in Sources */,
+				C1EC145D9142B0121B01BA0F /* BonjourBrowser.swift in Sources */,
+				5D00CDF9A7253F4D8EB2F610 /* BonusCampaign.swift in Sources */,
+				DEE113B76735BFB43EF16A53 /* BonusController.swift in Sources */,
+				723FA2F930913F7D30C38E34 /* BonusFlowView.swift in Sources */,
+				DA240627F007E44993C8E573 /* CastScreen.swift in Sources */,
+				A12CD0906C49FDC1E9A3C68C /* CertificatePinning.swift in Sources */,
+				159067DE1BF659A4ECA5C580 /* ClientIdentityStore.swift in Sources */,
+				A267C35E45ED747450A9E6CD /* CommandPipeline.swift in Sources */,
+				742C3AB22E940C2DFED2794A /* CompatibilityChecker.swift in Sources */,
+				0359B6E34CF1C8AC14ABE4A4 /* Components.swift in Sources */,
+				FC294DA7AA9A3822789781F5 /* ConnectionManager.swift in Sources */,
+				38E53020F6D93EF04F5E131C /* ContactSupportView.swift in Sources */,
+				ABC1CABCDAA1C09BADD33D70 /* DarwinObserver.swift in Sources */,
+				FF9DCEE3C49507533451672E /* DemoTVSession.swift in Sources */,
+				4E1A865739C07024E8A7929B /* DesignStatesGallery.swift in Sources */,
+				F6384CD2BDCEBF3AA1F16950 /* DeviceStore.swift in Sources */,
+				1DB446ABF8CE934569DFAE4C /* DiagnosticAllowance.swift in Sources */,
+				1AE27E9EAD68A29CF4C4D07F /* DiagnosticsLog.swift in Sources */,
+				839DAD3B72ADCEC248A149B6 /* DiscoveryService.swift in Sources */,
+				D008F23EA611147492FDCF04 /* DiscoveryView.swift in Sources */,
+				28465502090F027F43940EE7 /* EntitlementModel.swift in Sources */,
+				80639D4D6847FD54C145B808 /* EntitlementService.swift in Sources */,
+				7B4D96EBBBB5B4F23D8E5F64 /* ErrorViews.swift in Sources */,
+				ECCFA130B189AD6CF11FB77E /* FirebaseBootstrap.swift in Sources */,
+				AC5CCC3E3328DAE1A721AF94 /* FrameEncoderSizing.swift in Sources */,
+				543F07921CC0CA14C9277663 /* HelpArticle.swift in Sources */,
+				01BB11B701BD651CCE063507 /* HelpCenterView.swift in Sources */,
+				CC5664AE541699C052E3E776 /* Illustrations.swift in Sources */,
+				3EA694970F24AE4F14EF7AC1 /* JSONFileStore.swift in Sources */,
+				511BD687DDB0AEA6F2296DF6 /* KeyHoldController.swift in Sources */,
+				97FB032485F72BDDC27FF52D /* KeyboardView.swift in Sources */,
+				DAE37D0873D634B55E62609D /* KeychainStore.swift in Sources */,
+				CDBB68426C16CEC285B15FAF /* LANHTTPClient.swift in Sources */,
+				DDF052DC1573F342E170D951 /* LGAdapter.swift in Sources */,
+				032495344D30A56C35AE6FB5 /* LocalHTTPServer.swift in Sources */,
+				47ECA5B9898A831B8AB2C990 /* LocalNetworkInfo.swift in Sources */,
+				AC37A65FC0FC1771B166EFB7 /* Localization.swift in Sources */,
+				206BC8500803A5FB99B55F43 /* MediaCastController.swift in Sources */,
+				643B8E54EF2B2F2FB9E40809 /* MediaPreparation.swift in Sources */,
+				10C3C1EA7E23616662CCE244 /* MediaRendererController.swift in Sources */,
+				02BF725346065D3CFDCFF66C /* MirroringController.swift in Sources */,
+				F492842FF1F0BF389D9B30DA /* MirroringShared.swift in Sources */,
+				50E7E35F9A73F54F155FBFA8 /* MirroringView.swift in Sources */,
+				8E8F3D5FB1CEF528BDD48D0D /* NotificationService.swift in Sources */,
+				35CEAFDF308D1C6E60DC6607 /* NotificationSettingsView.swift in Sources */,
+				699E4B4573F4986EB49FCDC2 /* OfferCodeService.swift in Sources */,
+				2380F577132D4B6D0FE298F5 /* OnboardingFlow.swift in Sources */,
+				4008E048ACC6D3C804FE5A23 /* OnceFlag.swift in Sources */,
+				E1B988F1D4C02B6B7EA56534 /* PairingCoordinator.swift in Sources */,
+				793D55C5CF9108AE4932E941 /* PairingViews.swift in Sources */,
+				F7C2BAB601B5A9CC78B928E6 /* PaywallPresenter.swift in Sources */,
+				65C109E283E5996BC3D16C55 /* PaywallView.swift in Sources */,
+				6263786B5C04F4D202A65FFC /* Protobuf.swift in Sources */,
+				119374D461AFE4FEEFAC7C08 /* PurchaseSuccessView.swift in Sources */,
+				336A2A52191394A4CAD15A6A /* ReceiverPage.swift in Sources */,
+				DC4768F04B9FA37486E6E6A8 /* RemoteCommand.swift in Sources */,
+				CBA779361022F5605AD16573 /* RemoteKeys.swift in Sources */,
+				3550212D6925CDC2027E9B78 /* RemoteProView.swift in Sources */,
+				A74821135E58452C8BF43E73 /* RemoteScreen.swift in Sources */,
+				D47D6B7F83C146A5CABB4925 /* RootView.swift in Sources */,
+				98B189B341017AA814537639 /* SSDPClient.swift in Sources */,
+				8B6EFD9BAACAAC8ED62BEEF3 /* SamsungAdapter.swift in Sources */,
+				1BFA1BC0ACA303ABD44E728B /* SettingsComponents.swift in Sources */,
+				9EC55BB0B61E841CF5828AB4 /* SettingsScreen.swift in Sources */,
+				C60E47E4B19977E601ACC10D /* StoreService.swift in Sources */,
+				E862844802494D44895DF6E4 /* SupportService.swift in Sources */,
+				83047D7538BAC360ADCE6578 /* TLSStreamConnection.swift in Sources */,
+				40CC7AC1AB70665EA32C9613 /* TVAdapter.swift in Sources */,
+				5D839F62C1BE0B8967DA31C9 /* TVAppCatalog.swift in Sources */,
+				5501792A2CF2094F221512C0 /* TVAppsController.swift in Sources */,
+				F42D26485EA847FD1F23BE79 /* TVAppsView.swift in Sources */,
+				9FFF8E0D5E7C7CFCF94E2C94 /* TVCapabilities.swift in Sources */,
+				ACBD9945199C80180D7CD495 /* TVDevice.swift in Sources */,
+				C6A48F3A2DFA689D04556E74 /* TVIconStore.swift in Sources */,
+				8E68C4DCEF377EB4129A25F6 /* TVProber.swift in Sources */,
+				9BA20A892329B2511BAC62CD /* TVRemoteApp.swift in Sources */,
+				4691059ABB20B5540203D0E9 /* TVStatusCard.swift in Sources */,
+				050AE9B468372BC29ECB9D2C /* TextInputController.swift in Sources */,
+				59F8E557A5B79F315F8B18F6 /* Theme.swift in Sources */,
+				6DEF5B3A8150046940700ACD /* Typography.swift in Sources */,
+				35FDBA0155A9E7C5D3B78551 /* UPnPDevice.swift in Sources */,
+				02302DD63F15C394A5101D0E /* WakeOnLAN.swift in Sources */,
+				47091080E68AD233EA49D47F /* WebSocketClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2318FEC548B421E95455E054 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 978A45FFD1334C0085083067 /* TVRemoteScreenMirroring */;
+			targetProxy = 91C3E215B03BD7763C2849A6 /* PBXContainerItemProxy */;
+		};
+		41DA2E30EABA4F3C4D18064C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88F50DC82233850349F1AC2B /* BroadcastUpload */;
+			targetProxy = D54E46FE703B0E63F6D4F1A8 /* PBXContainerItemProxy */;
+		};
+		A54ACFF66FC1E3BE7FBF6E10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 978A45FFD1334C0085083067 /* TVRemoteScreenMirroring */;
+			targetProxy = D8922395DB29BA6107F1EC1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0793F0ADBFE059880C1C90F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = BroadcastUpload/BroadcastUpload.entitlements;
+				DEVELOPMENT_TEAM = 3B4YZ93BS3;
+				INFOPLIST_FILE = BroadcastUpload/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.TVRemoteScreenMirroring.BroadcastUpload;
+				PRODUCT_NAME = BroadcastUpload;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1768E936A67B99FA5EE65B63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.TVRemoteScreenMirroring.UITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = TVRemoteScreenMirroring;
+			};
+			name = Release;
+		};
+		4BA860D078CD232ABB3DB640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = BroadcastUpload/BroadcastUpload.entitlements;
+				DEVELOPMENT_TEAM = 3B4YZ93BS3;
+				INFOPLIST_FILE = BroadcastUpload/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.TVRemoteScreenMirroring.BroadcastUpload;
+				PRODUCT_NAME = BroadcastUpload;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		503575E41863C561EF0502D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.TVRemoteScreenMirroring.Tests;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVRemoteScreenMirroring.app/TVRemoteScreenMirroring";
+			};
+			name = Debug;
+		};
+		565EA02F87577CF04B75897D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TVRemoteScreenMirroring/Supporting/TVRemoteScreenMirroring.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3B4YZ93BS3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TVRemoteScreenMirroring/Supporting/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "TV Remote: Cast & Mirror";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.TVRemoteScreenMirroring;
+				PRODUCT_NAME = TVRemoteScreenMirroring;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6349369D34EEA5CD53D78CA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.TVRemoteScreenMirroring.Tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVRemoteScreenMirroring.app/TVRemoteScreenMirroring";
+			};
+			name = Release;
+		};
+		7F11D8C767C559C73B4024BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B61144F55427275C06058382 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TVRemoteScreenMirroring/Supporting/TVRemoteScreenMirroring.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3B4YZ93BS3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TVRemoteScreenMirroring/Supporting/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "TV Remote: Cast & Mirror";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.TVRemoteScreenMirroring;
+				PRODUCT_NAME = TVRemoteScreenMirroring;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C079A5DC0340731CB481B317 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.TVRemoteScreenMirroring.UITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = TVRemoteScreenMirroring;
+			};
+			name = Debug;
+		};
+		F2A8283BB258DC939F2ADD35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0804027E5C1217DFFA9474B2 /* Build configuration list for PBXNativeTarget "BroadcastUpload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BA860D078CD232ABB3DB640 /* Debug */,
+				0793F0ADBFE059880C1C90F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0EDC8C79660C23C5EFF245A4 /* Build configuration list for PBXNativeTarget "TVRemoteScreenMirroringTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				503575E41863C561EF0502D6 /* Debug */,
+				6349369D34EEA5CD53D78CA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5DA364F37C05075ED0A6B856 /* Build configuration list for PBXNativeTarget "TVRemoteScreenMirroring" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				565EA02F87577CF04B75897D /* Debug */,
+				B61144F55427275C06058382 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		68C0D9339A8CE0B8A6DBAE66 /* Build configuration list for PBXProject "TVRemoteScreenMirroring" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F11D8C767C559C73B4024BA /* Debug */,
+				F2A8283BB258DC939F2ADD35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E51C78E8EC59FB955445A0FF /* Build configuration list for PBXNativeTarget "TVRemoteScreenMirroringUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C079A5DC0340731CB481B317 /* Debug */,
+				1768E936A67B99FA5EE65B63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE0CA6D6B0FBBF07DAB1A7D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 12.19.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1422B3A9CC1C43FA3DB93981 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0CA6D6B0FBBF07DAB1A7D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		4BF6DE4C115B7E6320E87387 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0CA6D6B0FBBF07DAB1A7D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		65896A480453A97FD7DE4F46 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0CA6D6B0FBBF07DAB1A7D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		BF2BA8511B1CDB4D4340255B /* FirebaseAnalyticsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0CA6D6B0FBBF07DAB1A7D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E69049E21E2B55D0116B993E /* Project object */;
+}
