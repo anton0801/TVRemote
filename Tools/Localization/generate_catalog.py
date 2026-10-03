@@ -37,7 +37,8 @@ INFO_PLIST = {
         "Findet Fernseher in deinem WLAN und sendet Befehle, Fotos und deinen Bildschirm an den gewählten Fernseher.",
         "Trouve les téléviseurs sur votre réseau Wi‑Fi et envoie commandes, photos et votre écran au téléviseur choisi.",
     ),
-    "CFBundleDisplayName": ("TV Remote", "TV Remote", "TV Remote", "TV Remote", "TV Remote"),
+    # Must be a name the owner holds in App Store Connect (ITMS-90129 rejects names taken by other apps).
+    "CFBundleDisplayName": ("TV Remote: Cast & Mirror",) * 5,
 }
 
 # Dynamic key families built from Swift enums (keep in sync with the enums; unit tests cross-check).

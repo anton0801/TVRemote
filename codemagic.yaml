@@ -30,7 +30,7 @@ workflows:
           #!/bin/sh
           cd $CM_BUILD_DIR
           LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
-          agvtool new-version -all 2
+          agvtool new-version -all 3
       - name: Build ipa for distribution
         script: |
           xcode-project build-ipa \
