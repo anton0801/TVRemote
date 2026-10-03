@@ -1,76 +1,76 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "NSLocalNetworkUsageDescription": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Finds TVs on your Wi‑Fi network and sends remote commands, photos and your screen to the TV you choose."
+  "sourceLanguage" : "en",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TV Fernbedienung & Screen Cast"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Busca TV en tu red Wi‑Fi y envía órdenes, fotos y tu pantalla a la TV que elijas."
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TV Remote: Cast & Mirror"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Находит телевизоры в вашей сети Wi‑Fi и передаёт команды, фото и изображение экрана на выбранный телевизор."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mando TV & Duplicar Pantalla"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Findet Fernseher in deinem WLAN und sendet Befehle, Fotos und deinen Bildschirm an den gewählten Fernseher."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Télécommande TV & Screen Cast"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Trouve les téléviseurs sur votre réseau Wi‑Fi et envoie commandes, photos et votre écran au téléviseur choisi."
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ТВ Пульт & Miracast"
           }
         }
       }
     },
-    "CFBundleDisplayName": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TV Remote: Cast & Mirror"
+    "NSLocalNetworkUsageDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Findet Fernseher in deinem WLAN und sendet Befehle, Fotos und deinen Bildschirm an den gewählten Fernseher."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TV Remote: Cast & Mirror"
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finds TVs on your Wi‑Fi network and sends remote commands, photos and your screen to the TV you choose."
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TV Remote: Cast & Mirror"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Busca TV en tu red Wi‑Fi y envía órdenes, fotos y tu pantalla a la TV que elijas."
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TV Remote: Cast & Mirror"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trouve les téléviseurs sur votre réseau Wi‑Fi et envoie commandes, photos et votre écran au téléviseur choisi."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TV Remote: Cast & Mirror"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Находит телевизоры в вашей сети Wi‑Fi и передаёт команды, фото и изображение экрана на выбранный телевизор."
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }
